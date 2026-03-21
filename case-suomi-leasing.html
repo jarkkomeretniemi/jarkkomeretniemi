@@ -45,3 +45,101 @@
     .footer-bio p { font-size: 0.88rem; color: var(--muted); max-width: 340px; line-height: 1.6; }
     .footer-links { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
     .footer-links a { font-size: 0.88rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+    @media (max-width: 640px) { nav { padding: 1.5rem; } section { padding: 3rem 1.5rem; } .stats { grid-template-columns: 1fr; } footer { flex-direction: column; } .footer-links { text-align: left; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Jarkko Meretniemi</a>
+    <a href="index.html" class="back">← Takaisin</a>
+  </nav>
+
+  <div class="case-hero fade-in">
+    <div class="case-label">Case Suomi-Leasing</div>
+    <h1>Asiakastarina yrittäjän traktori-investoinnista nosti rahoitushakemusten määrän seitsenkertaiseksi</h1>
+  </div>
+
+  <hr class="rule" />
+
+  <section class="block fade-in">
+    <div class="block-label">Alkutilanne</div>
+    <p>Leasing-yrittäjä oli ostanut mainospaikan verkkolehdestä ja tarvitsi siihen yritysesittelyn — mutta pelkäsi alansa tylsyyttä.</p>
+    <p>Ehdotin, että tehdään asiakastarina, joka näyttää miten asiakkaan arki muuttui heidän palvelunsa avulla.</p>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="block fade-in">
+    <div class="block-label">Tarina</div>
+    <p>Haastattelin leasing-yrittäjän tyytyväisen asiakkaan. Tarinan kaari: mies kyllästyi palkkatyön työaikoihin ja loikkasi yrittäjäksi. Mutta yritystoiminta edellytti traktoria, eikä pankkilaina riittänyt. Sitten löytyi leasing-rahoitus, joka mahdollisti koneen hankinnan — ja samalla uuden arjen.</p>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="block fade-in">
+    <div class="block-label">Muutos</div>
+    <p>Potentiaaliset ostajat tunnistivat itsensä tarinasta. Heti ensimmäisenä kampanjapäivänä leasing-yritys sai rahoitushakemuksia 7-kertaisen määrän. Myös haastattelemani traktoriyrittäjän oma näkyvyys kasvoi: Googlen hakuosumat ja tarjouspyynnöt kasvoivat selvästi, ja työntekijähakemuksia tuli useita heti julkaisun jälkeen.</p>
+    <p>Verkkolehden mainosvastaava sanoi ettei ole koskaan nähnyt tuollaisia lukuja.</p>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="fade-in" style="padding-bottom: 0;">
+    <div class="block-label">Luvut</div>
+  </section>
+  <section class="fade-in" style="padding-top: 1.5rem;">
+    <div class="stats">
+      <div class="stat-box">
+        <div class="stat-num">4 min 54 s</div>
+        <div class="stat-desc">Keskimääräinen lukemisaika. Saman median advertoriaaleja luetaan keskimäärin 90 sekuntia.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">16,91 %</div>
+        <div class="stat-desc">Klikkausprosentti tarinan lukijoista mainostajan sivulle. Normaali on 1–2 %.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">20</div>
+        <div class="stat-desc">Rahoitushakemusta kampanjan ensimmäisenä päivänä. Normaalisti niitä tulee muutama viikossa.</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">7×</div>
+        <div class="stat-desc">Rahoitushakemusten kasvu kampanjan aikana. Kauppa kävi kiihkeästi loppuun asti.</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="fade-in" style="padding-top: 3rem; padding-bottom: 3rem;">
+    <a href="https://lnkd.in/gSdV4KhN" target="_blank" style="font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px;">Lue alkuperäinen asiakastarina →</a>
+  </section>
+
+  <div class="cta-bar fade-in">
+    <p>Haluatko tietää, tukeeko nykyinen asiakastarinanne oikeasti myyntiä?</p>
+    <a href="mailto:jarkko@jarkkomeretniemi.fi?subject=Asiakastarinan%20arvio&body=Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C" class="btn">Pyydä analyysi</a>
+  </div>
+
+  <footer class="fade-in">
+    <div class="footer-bio">
+      <div class="name">Jarkko Meretniemi</div>
+      <p>Kirjoitan asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:jarkko@jarkkomeretniemi.fi">jarkko@jarkkomeretniemi.fi</a>
+      <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn →</a>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
