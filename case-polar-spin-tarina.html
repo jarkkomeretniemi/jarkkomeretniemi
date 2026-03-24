@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How to make an app that attracts hundreds of thousands of mobile users – Polar Spin / VR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1713;
+      --muted: #7a7060;
+      --accent: #c8401a;
+      --rule: #d4cbbf;
+      --serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+    html { font-size: 18px; scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem; border-bottom: 1px solid var(--rule); }
+    .logo { font-family: var(--serif); font-size: 1rem; font-style: italic; color: var(--ink); text-decoration: none; }
+    nav a.back { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a.back:hover { color: var(--accent); }
+
+    .article { max-width: 680px; margin: 0 auto; padding: 5rem 2rem; }
+
+    .client-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; }
+
+    h1 { font-family: var(--serif); font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 2.5rem; }
+
+    .rule { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+    p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    .lead { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); line-height: 1.6; margin-bottom: 1.5rem; }
+
+    .pullquote { border-left: 2px solid var(--accent); padding-left: 1.4rem; margin: 2rem 0; }
+    .pullquote p { font-family: var(--serif); font-style: italic; font-size: 1.05rem; color: var(--ink); line-height: 1.55; margin-bottom: 0.5rem; }
+    .pullquote cite { font-size: 0.8rem; color: var(--muted); font-style: normal; letter-spacing: 0.04em; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; background: var(--ink); padding: 2.5rem; margin: 2.5rem 0; }
+    .stat-number { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 0.4rem; }
+    .stat-label { font-size: 0.78rem; color: #b0a898; line-height: 1.5; font-family: var(--sans); }
+
+    .cta-section { background: var(--ink); color: var(--cream); text-align: center; padding: 5rem 2rem; margin-top: 4rem; }
+    .cta-section h2 { font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 700; line-height: 1.3; margin-bottom: 1rem; max-width: 480px; margin-left: auto; margin-right: auto; }
+    .cta-section p { font-size: 0.9rem; color: #b0a898; max-width: 420px; margin: 0 auto 1.5rem; }
+    .btn-light { display: inline-block; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 2.2rem; transition: background 0.2s; }
+    .btn-light:hover { background: var(--accent); color: white; }
+
+    footer { border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; padding: 3rem 2rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-bio .name { font-family: var(--serif); font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .footer-bio p { font-size: 0.88rem; color: var(--muted); max-width: 340px; line-height: 1.6; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+    .footer-links a { font-size: 0.88rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+
+    @media (max-width: 640px) {
+      nav { padding: 1.5rem; }
+      .article { padding: 3rem 1.5rem; }
+      .stat-row { grid-template-columns: 1fr; gap: 1.5rem; }
+      footer { flex-direction: column; }
+      .footer-links { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">Jarkko Meretniemi</a>
+  <a href="case-polar-spin.html" class="back">← Takaisin</a>
+</nav>
+
+<div class="article">
+  <p class="client-label">Polar Spin / VR</p>
+  <h1>How to make an app that attracts hundreds of thousands of mobile users</h1>
+
+  <div class="stat-row">
+    <div>
+      <div class="stat-number">700 000</div>
+      <div class="stat-label">Downloads without any marketing efforts</div>
+    </div>
+    <div>
+      <div class="stat-number">25%</div>
+      <div class="stat-label">Of VR's total digital business revenue</div>
+    </div>
+  </div>
+
+  <p>The year 2018 began in the midst of dramatic transformation in VR (former Finnish State Railways). The technology on which the digital services and sales system relied at the time was outdated and difficult to maintain. It had been decided that the entire foundation would be rebuilt.</p>
+
+  <p>Vanessa Lehtinen, who had just come from Telia to lead VR's digital services, marketing and brand, was excited but uncertain about the project. She had a lot of ideas, especially for the upcoming mobile app. The goal of the new app was to replace previous commuter and long-distance traffic applications.</p>
+
+  <p>But development work wasn't progressing like it should, especially for mobile. Lehtinen wasn't comfortable with how mobile and web were seen as one big ticket shop, without understanding the unique features of each distinct channel.</p>
+
+  <div class="pullquote">
+    <p>"Personally, I felt that the website should inspire the customer to travel by train, while the mobile app would then help prepare for the trip and during it. For example, the app would notify the user about schedule changes and destinations. But this did not fit the mindset at the time."</p>
+    <cite>Vanessa Lehtinen, Head of Digital, Marketing and Branding, VR</cite>
+  </div>
+
+  <p>Another problem turned out to be the process itself: there was no direct way of communicating with developers who happened to work outside VR. In addition, there was little in-house expertise in design or development. Six months later Lehtinen realized that things couldn't go on in this way.</p>
+
+  <p>Together with her colleagues, she decided to try something new and turned the direction of the project in terms of mobile application development. For this purpose, a separate team was assembled at VR's premises in Pasila. The new React Native technology was chosen as the development tool because its code runs on both dominant mobile operating systems, Android and iOS. But one question remained: where to find experts in this fresh technology?</p>
+
+  <p>It took some time until developers from PolarSpin were finally found. After that Jouni, Petri and Vasant took responsibility for the front-end development of the application. Later, the team expanded with developers from Futurice and Netlight.</p>
+
+  <p>A small group began to create new practices in real time. Agile ways of working quickly spread to other parts of the organization as well. And so the VR Matkalla mobile application became the spearhead of the development project. The team worked effectively: the first version of the app was released for testing in six months and publicly available after a year.</p>
+
+  <div class="pullquote">
+    <p>"There are all kinds of consultants, but Jouni, Petri and Vasant are really solution-oriented and always deliver their best, and not just what is asked. They have invested more in this than anyone could have hoped for."</p>
+    <cite>Vanessa Lehtinen, Head of Digital, Marketing and Branding, VR</cite>
+  </div>
+
+  <p>Lehtinen is surprised at the success of the app.</p>
+
+  <div class="pullquote">
+    <p>"It has already been downloaded more than 700,000 times even though we got season and series tickets on sale only recently. People have switched from the old digital services to the new application organically, without marketing support. Measured in terms of money, the app already accounts for a quarter of the value of the entire digital business, which is a lot."</p>
+    <cite>Vanessa Lehtinen, Head of Digital, Marketing and Branding, VR</cite>
+  </div>
+
+  <p>Collaboration with PolarSpin has continued for over two years. The business owner of the team came to Lehtinen one day with a verdict.</p>
+
+  <div class="pullquote">
+    <p>"She said she has never worked with such professionals. They are able to evaluate content, chat with designers and understand how to strive for quality at every level. These guys are real gems."</p>
+    <cite>Vanessa Lehtinen, Head of Digital, Marketing and Branding, VR</cite>
+  </div>
+
+  <p>The success of the application has increased the importance of mobile in VR's portfolio of services. It suits Lehtinen, whose goal is nothing short of creating the best possible customer experience.</p>
+
+  <div class="pullquote">
+    <p>"When we succeed, VR's mobile services will make the daily lives of hundreds of thousands of Finns easier and more enjoyable. There is also a masochistic mission to this: to make VR a sexy brand."</p>
+    <cite>Vanessa Lehtinen, Head of Digital, Marketing and Branding, VR</cite>
+  </div>
+
+</div>
+
+<div class="cta-section">
+  <h2>Haluatko tietää, puhutteleeko nykyinen asiakastarinanne oikeasti ostajaa?</h2>
+  <p>Lähetä linkki nykyiseen caseen tai referenssisivuun. Saat suoran näkemyksen siitä, mikä toimii ja mitä muuttamalla se tukisi myyntiä paremmin.</p>
+  <a href="/cdn-cgi/l/email-protection#660c07140d0d09260c07140d0d090b03140312080f030b0f48000f591513040c0305125b27150f070d07151207140f0807084354560714100f09400409021f5b2e030f4354562c07140d0d094354254356274356270e070a13070f150f084354560312124325554327524354560714100f090f12435456070a0a07435456090a0310070843545607150f070d07151207140f0807084843562743562732031410030f150f08435425" class="btn-light">Pyydä analyysi</a>
+</div>
+
+<footer>
+  <div class="footer-bio">
+    <div class="name">Jarkko Meretniemi</div>
+    <p>Kirjoitan asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+  </div>
+  <div class="footer-links">
+    <a href="/cdn-

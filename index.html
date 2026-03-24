@@ -35,56 +35,18 @@
     .rule { border: none; border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; }
 
     .body-block { max-width: 680px; margin: 0 auto; padding: 4rem 2rem; }
-
-    /* Iso aloituslause */
-    .body-block .intro {
-      font-family: var(--serif);
-      font-size: clamp(1.2rem, 2.5vw, 1.55rem);
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.35;
-      margin-bottom: 1.4rem;
-    }
-
-    /* Normaali leipäteksti */
-    .body-block p {
-      color: var(--muted);
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      line-height: 1.8;
-    }
+    .body-block .intro { font-family: var(--serif); font-size: clamp(1.2rem, 2.5vw, 1.55rem); font-weight: 700; color: var(--ink); line-height: 1.35; margin-bottom: 1.4rem; }
+    .body-block p { color: var(--muted); margin-bottom: 1rem; font-size: 1rem; line-height: 1.8; }
     .body-block p:last-child { margin-bottom: 0; }
-
-    /* Iso muted-lause keskellä */
-    .body-block .pullout {
-      font-family: var(--serif);
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--muted);
-      border-left: 2px solid var(--rule);
-      padding-left: 1.4rem;
-      margin: 1.6rem 0;
-      line-height: 1.6;
-    }
-
-    /* Closing-lause */
-    .body-block .closing {
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 1.08rem;
-      color: var(--ink);
-      margin-top: 1.4rem;
-      line-height: 1.55;
-    }
+    .body-block .closing { font-family: var(--serif); font-style: italic; font-size: 1.08rem; color: var(--ink); margin-top: 1.4rem; line-height: 1.55; }
     .body-block .closing .accent { color: var(--accent); }
 
-    /* Metodi-osio — isompi padding, eri tunnelma */
     .metodi-block { max-width: 680px; margin: 0 auto; padding: 5rem 2rem; }
+    .metodi-block .accent { color: var(--accent); }
     .metodi-block .metodi-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.4rem; }
     .metodi-block p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
     .metodi-block p:last-child { margin-bottom: 0; color: var(--ink); font-style: italic; font-family: var(--serif); font-size: 1rem; }
 
-    /* Cases */
     section { max-width: 680px; margin: 0 auto; padding: 5rem 2rem; }
     .cases-section { padding-top: 5rem; }
     .cases-section h2 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; font-style: italic; color: var(--muted); margin-bottom: 2.5rem; }
@@ -96,7 +58,6 @@
     .case-item .arrow { font-size: 1.1rem; color: var(--accent); flex-shrink: 0; margin-top: 0.15rem; transition: transform 0.2s; }
     .case-item:hover .arrow { transform: translateX(4px); }
 
-    /* Prosessi */
     .process h2 { font-family: var(--serif); font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; margin-bottom: 2.5rem; }
     .steps { display: flex; flex-direction: column; }
     .step { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1.2rem; padding: 1.8rem 0; border-top: 1px solid var(--rule); }
@@ -105,7 +66,6 @@
     .step-body p { font-size: 0.95rem; color: var(--muted); }
     .step-body strong { display: block; color: var(--ink); font-weight: 500; margin-bottom: 0.3rem; }
 
-    /* CTA */
     .cta-section { background: var(--ink); color: var(--cream); text-align: center; }
     .cta-section h2 { font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 700; line-height: 1.3; margin-bottom: 1.25rem; }
     .cta-section p { font-size: 0.95rem; color: #b0a898; max-width: 500px; margin: 0 auto 0.75rem; }
@@ -115,7 +75,6 @@
     .btn-light { display: inline-block; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 2.2rem; transition: background 0.2s; }
     .btn-light:hover { background: var(--accent); color: white; }
 
-    /* Footer */
     footer { border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; padding: 3rem 2rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
     .footer-bio .name { font-family: var(--serif); font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
     .footer-bio p { font-size: 0.88rem; color: var(--muted); max-width: 340px; line-height: 1.6; }
@@ -140,76 +99,68 @@
 
   <nav>
     <a href="#" class="logo">Jarkko Meretniemi</a>
-    <a href="#cases" class="cta-nav">Case-esimerkit</a>
+    <a href="#cases" class="cta-nav">Esimerkkejä työstäni</a>
   </nav>
 
   <div class="hero fade-in">
-    <h1>Torppaatteko myyntiä <em>omilla asiakastarinoillanne?</em></h1>
+    <h1>Jarrutatteko myyntiä <em><br/>omilla asiakastarinoillanne?</em></h1>
     <p class="sub">Geneerinen case-esittely ei poista ostajan epäilyksiä — se saa ratkaisunne näyttämään samalta kuin muilla. Kun uuden asiakkuuden arvo on kymmeniä tai satoja tuhansia euroja, se voi koitua kalliiksi.</p>
-    <a href="#prosessi" class="btn">Katso miten autan tässä →</a>
+    <a href="case-suomi-leasing.html" class="btn">1 asiakastarina, 7× enemmän tuloksia →</a>
   </div>
 
   <hr class="rule" />
 
-  <!-- Osio 1: iso aloituslause + selitys -->
   <div class="body-block fade-in">
     <p class="intro">Yritykset jättävät asiakastarinat puolitiehen.</p>
-    <p>Valtaosa suhtautuu niihin vain pakollisena otsikkona nettisivujen navigaatiossa. Siksi ne kelpaavat vain ostajan jo tekemän päätöksen validoimiseen — eivät sen muovaamiseen.</p>
+    <p>Valtaosa suhtautuu niihin vain pakollisena otsikkona nettisivujen navigaatiossa. Siksi ne kelpaavat vain ostajan jo tekemän päätöksen validoimiseen — eivät sen synnyttämiseen.</p>
   </div>
 
   <hr class="rule" />
 
-  <!-- Osio 2: pullout-lause + closing kahdessa osassa -->
   <div class="body-block fade-in">
-    <p class="intro">Geneeristen case-esittelyiden ainoa arvo on todistaa, että teillä on ollut asiakkaita.</p>
-    <p>Niiden puhe tuotteesta ja yhteistyön sujuvuudesta sekä asiakkaan kehut kuulostavat ostajasta vakuuttelulta. </p>
-    <p>Hyvä asiakastarina tekee jotain muuta: ostaja tunnistaa siitä oman tilanteensa ja alkaa haluta sen kuvaamaa muutosta.</p>
-   </div> 
-    
-  <hr class="rule" />
-    
-    
-
+    <p class="intro">Usein geneeristen case-esittelyiden ainoa arvo on todistaa, että teillä on ollut asiakkaita.</p>
+    <p>Niiden puhe tuotteesta ja yhteistyön sujuvuudesta kuulostaa vakuuttelulta. Toisin kuin hyvä asiakastarina. Se saa ostajan tunnistamaan oman tilanteensa — ja haluamaan muutosta.</p>
+  </div>
 
   <hr class="rule" />
+
   <div class="metodi-block fade-in">
-<p class="closing">Mitä jos teidän asiakastarinat eivät vakuuttelisi vaan <span class="accent">muuttaisivat ostajan epäilykset ostopäätökseksi?</span></p>
-  </div>  
+    <p class="closing">Mitä jos teidän asiakastarinat eivät vakuuttelisi vaan <span class="accent">muuttaisivat ostajan epäilykset ostopäätökseksi?</span></p>
+  </div>
 
   <hr class="rule" />
-  
-  <!-- Osio 3: metodi — label + teksti + kursiivi lopetus -->
+
   <div class="metodi-block fade-in">
     <div class="metodi-label">Miten autan siinä</div>
-    <p>Kirjoitan asiakastarinat muutoksesta käsin: asiakkaan tilanteesta ennen ratkaisua — stressistä, epävarmuudesta ja siitä, mitä oli panoksena jos mikään ei olisi muuttunut.</p> 
-    <p>Kun sen jälkeen näyttää, miten arki muuttui teidän ratkaisunne avulla, lopputuloksella on ostajalle dramaattinen painoarvo.</p>
-    <p></p>
-    <p>Jos ostajasi on samassa tilanteessa kuin asiakas tarinasi alussa, hän ymmärtää, miten kallisarvoinen muutos on.</p>
+    <p>Kirjoitan asiakastarinat muutoksesta käsin: asiakkaan tilanteesta ennen ratkaisua — stressistä, epävarmuudesta ja siitä, mitä oli panoksena jos mikään ei olisi muuttunut.</p>
+    <p style="color: var(--muted); font-size: 1rem; font-style: normal; font-family: var(--sans);">Ja kun lopuksi asiakkaan arjessa on kaikki toisin teidän ratkaisunne avulla, sillä on ostajalle dramaattinen painoarvo.</p>
+    <p>Jos ostaja on samassa tilanteessa kuin asiakas tarinasi alussa, hän ymmärtää, miten kallisarvoinen muutos on.</p>
+    <p><span class="accent">Ja siksi haluaa ratkaisuanne.</span></p>
   </div>
 
   <hr class="rule" />
 
   <section class="cases-section fade-in" id="cases">
-    <h2>Case-esimerkkejä</h2>
+    <h2>Esimerkkejä työstäni</h2>
     <div class="case-list">
       <a href="case-suomi-leasing.html" class="case-item">
         <div style="flex:1;">
-          <div class="case-label">Case Suomi-Leasing</div>
-          <p>Näin leasing-yrittäjä seitsenkertaisti rahoitushakemusten määrän.</p>
+          <div class="case-label">Case Suomi Leasing</div>
+          <p>Näin leasing-yritys seitsenkertaisti rahoitushakemusten määrän – asiakastarinan avulla</p>
         </div>
         <span class="arrow">→</span>
       </a>
       <a href="case-visma.html" class="case-item">
         <div style="flex:1;">
           <div class="case-label">Case Visma</div>
-          <p>Softatalo Visma näyttää ERP-ratkaisunsa arvon teollisuusyrityksen arjen kautta — ei luettelemalla tuoteominaisuuksia.</p>
+          <p>Monimutkaisen tuotteen arvo havainnollistui ostajalle asiakastarinan kautta</p>
         </div>
         <span class="arrow">→</span>
       </a>
       <a href="case-polar-spin.html" class="case-item">
         <div style="flex:1;">
           <div class="case-label">Case Polar Spin</div>
-          <p>Pieni mobiilitoimisto teki osaamisensa näkyväksi kuvaamalla korkean profiilin asiakashankkeen.</p>
+          <p>Pieni mobiilisovellustoimisto teki osaamisensa näkyväksi – korkean profiilin hankkeesta kertovalla asiakastarinalla</p>
         </div>
         <span class="arrow">→</span>
       </a>
@@ -232,7 +183,7 @@
         <div class="step-num">02</div>
         <div class="step-body">
           <strong>Kirjoitan asiakastarinan valmiiksi</strong>
-          <p>Käytettäväksi myynnissä, nettisivuilla ja somessa.</p>
+          <p>Niin että se on myynnin työkalu eikä pelkkä referenssi.</p>
         </div>
       </div>
       <div class="step">

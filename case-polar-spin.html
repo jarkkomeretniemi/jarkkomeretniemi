@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case Suomi Leasing — Jarkko Meretniemi</title>
+  <title>Case Polar Spin — Jarkko Meretniemi</title>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -25,7 +25,6 @@
       line-height: 1.7;
     }
 
-    /* NAV */
     nav {
       padding: 28px 48px;
       display: flex;
@@ -40,19 +39,10 @@
       font-size: 14px;
       letter-spacing: 0.04em;
     }
-    nav .logo {
-      font-family: 'Libre Baskerville', serif;
-      font-size: 15px;
-    }
-    nav .back {
-      color: var(--mid);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+    nav .logo { font-family: 'Libre Baskerville', serif; font-size: 15px; }
+    nav .back { color: var(--mid); display: flex; align-items: center; gap: 6px; }
     nav .back:hover { color: var(--terracotta); }
 
-    /* HERO */
     .hero {
       max-width: 760px;
       margin: 0 auto;
@@ -80,25 +70,24 @@
       width: 48px;
       height: 2px;
       background: var(--terracotta);
-      margin-bottom: 40px;
     }
 
-    /* STATS BAR */
-    .stats {
+    /* STAT BANNER */
+    .stat-banner {
       background: var(--dark);
       color: var(--cream);
       padding: 48px;
     }
-    .stats-inner {
+    .stat-banner-inner {
       max-width: 760px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 40px;
     }
     .stat-number {
       font-family: 'Libre Baskerville', serif;
-      font-size: 40px;
+      font-size: 48px;
       font-weight: 700;
       color: var(--terracotta-light);
       line-height: 1;
@@ -111,7 +100,6 @@
       color: #B8B0A4;
     }
 
-    /* BODY */
     .body-content {
       max-width: 760px;
       margin: 0 auto;
@@ -147,7 +135,6 @@
       margin: 56px 0;
     }
 
-    /* PULLQUOTE */
     .pullquote {
       border-left: 3px solid var(--terracotta);
       padding: 4px 0 4px 32px;
@@ -168,7 +155,6 @@
       letter-spacing: 0.04em;
     }
 
-    /* CTA */
     .cta-section {
       background: #EDE8DE;
       padding: 64px 48px;
@@ -203,7 +189,6 @@
     }
     .cta-btn:hover { background: #A8573F; }
 
-    /* FOOTER */
     footer {
       padding: 32px 48px;
       border-top: 1px solid var(--rule);
@@ -226,8 +211,8 @@
     @media (max-width: 640px) {
       nav { padding: 20px 24px; }
       .hero { padding: 48px 24px 40px; }
-      .stats { padding: 36px 24px; }
-      .stats-inner { grid-template-columns: 1fr; gap: 28px; }
+      .stat-banner { padding: 36px 24px; }
+      .stat-banner-inner { grid-template-columns: 1fr; gap: 28px; }
       .body-content { padding: 48px 24px; }
       .cta-section { padding: 48px 24px; }
       footer { padding: 24px; flex-direction: column; gap: 12px; text-align: center; }
@@ -242,59 +227,35 @@
 </nav>
 
 <div class="hero">
-  <p class="client-label">Case Suomi Leasing</p>
-  <h1>Näin leasing-yritys seitsenkertaisti rahoitushakemusten määrän – asiakastarinan avulla</h1>
+  <p class="client-label">Case Polar Spin</p>
+  <h1>Pieni mobiilisovellustoimisto teki osaamisensa näkyväksi – korkean profiilin hankkeesta kertovalla asiakastarinalla</h1>
   <div class="hero-rule"></div>
-</div>
-
-<div class="stats">
-  <div class="stats-inner">
-    <div>
-      <div class="stat-number">7×</div>
-      <div class="stat-label">Rahoitushakemusten määrän kasvu kampanjan aikana</div>
-    </div>
-    <div>
-      <div class="stat-number">16,91%</div>
-      <div class="stat-label">Prosenttiosuus tarinan lukijoista jotka klikkasivat mainostajan sivulle — saman median keskiarvo on 1–2 %. Tarinan CTR oli 10×.</div>
-    </div>
-    <div>
-      <div class="stat-number">4 min 54 s</div>
-      <div class="stat-label">Lukemiseen käytetty keskimääräinen aika — muiden advertoriaalien keskiarvo oli 90 sekuntia. Tarinan lukuaika oli 3×.</div>
-    </div>
-  </div>
 </div>
 
 <div class="body-content">
 
   <p class="section-label">Alkutilanne</p>
-  <p>Leasing-yrittäjä oli ostanut mainospaikan verkkolehdestä ja tarvitsi siihen yritysesittelyn — mutta pelkäsi alansa tylsyyttä.</p>
-  <p>Ehdotin, että tehdään asiakastarina, joka näyttää miten asiakkaan arki muuttui heidän palvelunsa avulla.</p>
+  <p>Kolmen miehen mobiilisovellus-boutique Polar Spin oli vahvasti yhden suuren asiakkuuden varassa. Se toi epävarmuutta siitä, miten myynti kehittyisi projektin jälkeen. Ehdotin, että kirjoitetaan tarina heidän asiakasprojektistaan Valtion rautateiden kanssa.</p>
 
   <hr class="section-divider">
 
   <p class="section-label">Tarina</p>
-  <h2>Vanha traktori auttoi yrittäjää tekemään puolen miljoonan liikevaihdon heti ensimmäisenä vuonna</h2>
+  <h2>Miten tehdään sovellus, jonka sadat tuhannet lataavat ilman markkinointia</h2>
 
-  <p>Haastattelin Suomi Leasingin asiakkaan, kainuulaisen metsäalan yrittäjän. Tarina lähti yrittäjän uravaihdoksesta — ja päätyi traktoriin, joka ei olisi järjestynyt ilman leasing-rahoitusta. Sen avulla yrittäjä teki puolen miljoonan liikevaihdon heti ensimmäisenä vuonna.</p>
+  <p>Kirjoitin tarinan heidän mobiilisovellusprojektistaan Valtion rautateiden kanssa. VR:n mobiilikehitys oli ollut jumissa — ei sisäistä asiantuntemusta, ei toimivaa prosessia. Polar Spin toi mukanaan React Native -osaamisensa ja can-do-asenteen, jotka levisivät lopulta koko organisaatioon.</p>
 
-  <p>
-    <a href="case-suomi-leasing-tarina.html" style="color: var(--accent); font-family: var(--sans); font-size: 0.9rem; letter-spacing: 0.04em;">Lue tarina →</a>
-    &nbsp;&nbsp;
-    <a href="https://www.maaseuduntulevaisuus.fi/mainos/fb7f291a-3eeb-45c5-8653-0a33c3c46d12" target="_blank" style="color: var(--muted); font-family: var(--sans); font-size: 0.9rem; letter-spacing: 0.04em;">Lue alkuperäinen Maaseudun Tulevaisuudessa →</a>
-  </p>
+  <p><a href="case-polar-spin-tarina.html" style="color: var(--accent); font-family: var(--sans); font-size: 0.9rem; letter-spacing: 0.04em;">Lue tarina →</a></p>
 
   <hr class="section-divider">
 
   <p class="section-label">Muutos</p>
-  <p>Potentiaaliset ostajat tunnistivat itsensä tarinasta. Heti ensimmäisenä kampanjapäivänä leasing-yritys sai rahoitushakemuksia seitsenkertaisen määrän.</p>
+  <p>Polar Spin sai referenssitarinan, joka teki näkyväksi, millä tavoilla he pystyivät asiakastaan auttamaan. Näin uusille asiakkaille oli helpompi osoittaa, millaisia projekteja he tekevät ja millaista arvoa heidän työnsä tuottaa.</p>
 
-  <p>Verkkolehden mainosvastaava sanoi, ettei ole koskaan nähnyt tuollaisia lukuja.</p>
-
-  <p>Myös haastatellun traktoriyrittäjän oma näkyvyys kasvoi: Googlen hakuosumat ja tarjouspyynnöt kasvoivat selvästi, ja työntekijähakemuksia tuli useita heti julkaisun jälkeen.</p>
+  <p>Tarina näyttää osaamisen hyödyt siellä missä ne todella ovat — asiakkaan kokemassa muutoksessa — eikä yrityksen omissa väittämissä.</p>
 
 </div>
 
 <div class="cta-section">
   <h3>Haluatko tietää, puhutteleeko nykyinen asiakastarinanne oikeasti ostajaa?</h3>
   <p>Lähetä linkki nykyiseen caseen tai referenssisivuun. Saat suoran näkemyksen siitä, mikä toimii ja mitä muuttamalla se tukisi myyntiä paremmin.</p>
-  <a href="/cdn-cgi/l/email-protection#4c262d3e2727230c262d3e27272321293e29382225292125622a25733f392e26292f38710d3f252d272d3f382d3e25222d22697e7c2d3e3a25236a2e23283571042925697e7c062d3e272723697e0f697c0d697c0d242d20392d253f2522697e7c293838690f7f690d78697e7c2d3e3a25232538697e7c2d20202d697e7c2320293a2d22697e7c2d3f252d272d3f382d3e25222d2262697c0d697c0d18293e3a29253f2522697e0f" 
+  <a href="/cdn-cgi/l/email-protection#751f14071e1e1a351f14071e1e1a18100710011b1c10181c5b131c4a0600171f1016014834061c141e14060114071c1b141b5047451407031c1a53171a110c483d101c5047453f14071e1e1a5047365045345045341d141900141c061c1b5047451001015036465034415047451407031c1a1c01504745141919145047451a191003141b50474514061c141e14060114071c1b141b5b50453450453421100703101c061c1b504736" 
