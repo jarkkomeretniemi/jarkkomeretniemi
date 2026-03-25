@@ -61,7 +61,7 @@
     .process h2 { font-family: var(--serif); font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; margin-bottom: 2.5rem; }
     .steps { display: flex; flex-direction: column; }
     .step { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1.2rem; padding: 1.8rem 0; border-top: 1px solid var(--rule); }
-    .step:last-child { border-bottom: 1px solid var(--rule); }
+    .step:last-child { border-bottom: none; }
     .step-num { font-family: var(--serif); font-size: 0.85rem; color: var(--accent); padding-top: 0.15rem; font-style: italic; }
     .step-body p { font-size: 0.95rem; color: var(--muted); }
     .step-body strong { display: block; color: var(--ink); font-weight: 500; margin-bottom: 0.3rem; }
@@ -169,7 +169,8 @@
 
   <hr class="rule" />
 
-  <section class="process fade-in" id="prosessi">
+  <section class="process fade-in" id="prosessi" style="background: #ede8df; padding: 5rem 2rem 0;">
+    <div style="max-width: 680px; margin: 0 auto; padding-bottom: 0;">
     <h2>Näin työ etenee</h2>
     <div class="steps">
       <div class="step">
@@ -194,13 +195,13 @@
         </div>
       </div>
     </div>
+    </div>
   </section>
 
-  <hr class="rule" />
-
-  <section class="fade-in" style="max-width: 680px; margin: 0 auto; padding: 3rem 2rem;">
+  <section class="fade-in" style="max-width: 680px; margin: 0 auto; padding: 4rem 2rem;">
     <h2 style="font-family: var(--serif); font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; margin-bottom: 1.5rem;">Aikataulu ja hinta</h2>
-    <p style="font-family: var(--sans); font-size: 0.95rem; color: var(--muted);">Tarina on valmis kahdessa viikossa asiakkaan haastattelusta. Hinta alkaen 2&nbsp;500&nbsp;€ + alv.</p>
+    <p style="font-family: var(--sans); font-size: 0.95rem; color: var(--muted); margin-bottom: 0.5rem;">Tarina on valmis kahdessa viikossa asiakkaan haastattelusta. Hinta alkaen 2&nbsp;500&nbsp;€ + alv.</p>
+    <p style="font-family: var(--sans); font-size: 0.95rem; color: var(--muted);">Tyytyväisyystakuu — jos tarina ei vastaa sovittua, saat rahat takaisin.</p>
   </section>
 
   <section class="cta-section fade-in" style="max-width: 100%; padding: 6rem 2rem;">
