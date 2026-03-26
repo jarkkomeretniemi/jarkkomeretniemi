@@ -48,15 +48,57 @@
     .metodi-block p:last-child { margin-bottom: 0; color: var(--ink); font-style: italic; font-family: var(--serif); font-size: 1rem; }
 
     section { max-width: 680px; margin: 0 auto; padding: 5rem 2rem; }
+
     .cases-section { padding-top: 5rem; }
-    .cases-section h2 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; font-style: italic; color: var(--muted); margin-bottom: 2.5rem; }
-    .case-list { display: flex; flex-direction: column; gap: 1.5px; }
-    .case-item { background: white; padding: 2rem 2.2rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; text-decoration: none; color: inherit; transition: background 0.2s; }
-    .case-item:hover { background: #ede8df; }
-    .case-label { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
-    .case-item p { font-size: 0.95rem; line-height: 1.6; color: var(--ink); }
-    .case-item .arrow { font-size: 1.1rem; color: var(--accent); flex-shrink: 0; margin-top: 0.15rem; transition: transform 0.2s; }
-    .case-item:hover .arrow { transform: translateX(4px); }
+    .cases-section h2 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; font-style: italic; color: var(--muted); margin-bottom: 3rem; }
+
+    .case-card { margin-bottom: 2.5rem; }
+    .case-card:last-child { margin-bottom: 0; }
+
+    .case-card-category {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.6rem;
+    }
+
+    .case-card-link {
+      background: white;
+      padding: 2rem 2.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.2s;
+    }
+    .case-card-link:hover { background: #ede8df; }
+
+    .case-card-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+    .case-card-link p {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .case-card-link .arrow {
+      font-size: 1.1rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+      transition: transform 0.2s;
+    }
+    .case-card-link:hover .arrow { transform: translateX(4px); }
 
     .process h2 { font-family: var(--serif); font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; margin-bottom: 2.5rem; }
     .steps { display: flex; flex-direction: column; }
@@ -71,7 +113,7 @@
     .cta-section p { font-size: 0.95rem; color: #b0a898; max-width: 500px; margin: 0 auto 0.75rem; }
     .cta-list { list-style: none; font-size: 0.9rem; color: #b0a898; margin: 1rem auto 2rem; max-width: 400px; }
     .cta-list li { padding: 0.2rem 0; }
-    .cta-list li::before { content: "→ "; color: var(--accent); }
+    .cta-list li::before { content: "\2192 "; color: var(--accent); }
     .btn-light { display: inline-block; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 2.2rem; transition: background 0.2s; }
     .btn-light:hover { background: var(--accent); color: white; }
 
@@ -99,7 +141,7 @@
 
   <nav>
     <a href="#" class="logo">Jarkko Meretniemi</a>
-    <a href="#cases" class="cta-nav">Esimerkkejä työstäni</a>
+    <a href="#cases" class="cta-nav">Mitä teen käytännössä</a>
   </nav>
 
   <div class="hero fade-in">
@@ -133,38 +175,63 @@
   <div class="metodi-block fade-in">
     <div class="metodi-label">Miten autan siinä</div>
     <p>99% referensseistä alkaa asiakkaan tavoitteesta ja loppuu sen saavuttamiseen, esim.<br/>"Halusimme paremman varastonhallintajärjestelmän" —<br/>"Yritykseltä X saimme juuri sen mitä halusimme"</p>
-    <p style="color: var(--muted); font-size: 1rem; font-style: normal; font-family: var(--sans);">Paitsi että kuvaus on ostajan silmään tylsä, siinä on jätetty kaivamatta esiin SE OIKEA tarina: miksi muutos oli välttämätön? Mitä olisi tapahtunut jos mikään ei olisi muuttunut? Kun asiakkaan kipu ja panokset tehdään näkyväksi, silloin ratkaisun painoarvo kasvaa.</p>
-    <p>Ja kun ostaja samastuu tarinan tilanteeseen, hän ymmärtää mitä on vaakalaudalla myös hänen arjessaan.</p>
-    <p><span class="accent">Siksi hän haluaa teidän ratkaisunne.</span></p>
+    <p style="color: var(--muted); font-size: 1rem; font-style: normal; font-family: var(--sans);">Kuvauksesta puuttuu kaikki se, mikä oikeasti vaikuttaa ostopäätökseen:</p>
+    <p style="color: var(--muted); font-size: 1rem; font-style: normal; font-family: var(--sans); line-height: 2.1;">
+      – Miksi asiakkaan oli pakko muuttua?<br/>
+      – Mitä olisi tapahtunut jos mikään ei olisi muuttunut?<br/>
+      – Miten hän oli yrittänyt ratkaista ongelmaa aiemmin<br/>
+      – ja miksi se ei toiminut?<br/>
+      – Mitä ratkaisu konkreettisesti muutti hänen arjessaan?<br/>
+      – Ja miksi sillä on hänelle väliä?
+    </p>
+    <p>Kun nämä ovat tarinassa, ostaja ei lue referenssiä. Hän tunnistaa oman tilanteensa – <span class="accent">ja haluaa teidän ratkaisunne.</span></p>
+  </div>
+
+  <hr class="rule" />
+
+  <div class="metodi-block fade-in">
+    <div class="metodi-label">Kenelle tämä on</div>
+    <p class="closing">Jos myyt 50 euron tuotetta verkkokaupassa, et tarvitse strategista asiakastarinaa. Mutta jos yksi asiakkuus on kymmenien tuhansien arvoinen ja ostajan epäröinti estää tekemästä päätöstä — <span class="accent">silloin tarvitset.</span></p>
   </div>
 
   <hr class="rule" />
 
   <section class="cases-section fade-in" id="cases">
-    <h2>Esimerkkejä työstäni</h2>
-    <div class="case-list">
-      <a href="case-suomi-leasing.html" class="case-item">
+    <h2>Mitä strateginen asiakastarina tarkoittaa käytännössä?</h2>
+
+    <div class="case-card">
+      <div class="case-card-category">Tuloksia</div>
+      <a href="case-suomi-leasing.html" class="case-card-link">
         <div style="flex:1;">
-          <div class="case-label">Case Suomi Leasing</div>
-          <p>Näin leasing-yritys seitsenkertaisti rahoitushakemusten määrän – yhden asiakastarinan avulla</p>
-        </div>
-        <span class="arrow">→</span>
-      </a>
-      <a href="case-visma.html" class="case-item">
-        <div style="flex:1;">
-          <div class="case-label">Case Visma</div>
-          <p>Monimutkaisen tuotteen arvo havainnollistui ostajalle asiakastarinan kautta</p>
-        </div>
-        <span class="arrow">→</span>
-      </a>
-      <a href="case-polar-spin.html" class="case-item">
-        <div style="flex:1;">
-          <div class="case-label">Case Polar Spin</div>
-          <p>Pieni mobiilisovellustoimisto teki osaamisensa näkyväksi – korkean profiilin hankkeesta kertovalla asiakastarinalla</p>
+          <div class="case-card-label">Case Suomi Leasing</div>
+          <p>Leasing-yritys seitsenkertaisti rahoitushakemusten määrän — yhden asiakastarinan avulla</p>
         </div>
         <span class="arrow">→</span>
       </a>
     </div>
+
+    <div class="case-card">
+      <div class="case-card-category">Kääntämistä asiakkaan kielelle</div>
+      <a href="case-visma.html" class="case-card-link">
+        <div style="flex:1;">
+          <div class="case-card-label">Case Visma</div>
+          <p>Miten monimutkaisesta ERP-tuotteesta tuli tarina jonka "tekee mieli lukea loppuun"</p>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="case-card">
+      <div class="case-card-category">Arjen dramatisointia</div>
+      <a href="case-polar-spin.html" class="case-card-link">
+        <div style="flex:1;">
+          <div class="case-card-label">Case Polar Spin</div>
+          <p>Pieni mobiilisovellustoimisto pelastamassa Valtion rautateiden kehityshanketta</p>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
   </section>
 
   <hr class="rule" />
@@ -204,6 +271,20 @@
     <p style="font-family: var(--sans); font-size: 0.95rem; color: var(--muted);">Tyytyväisyystakuu — jos tarina ei vastaa sovittua, saat rahat takaisin.</p>
   </section>
 
+  <hr class="rule" />
+
+  <div class="metodi-block fade-in">
+    <div class="metodi-label">Kuka olen</div>
+    <div style="display: flex; gap: 2rem; align-items: flex-start;">
+      <img src="jarkko.jpg" alt="Jarkko Meretniemi" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; object-position: center 20%; flex-shrink: 0;" />
+      <div>
+        <p>Olen tutkinut tarinankerrontaa yli viisitoista vuotta — Hollywood-käsikirjoitusteorioista markkinoinnin sovelluksiin. Asiakastarinoiden tekemisessä yhdistyy kaksi asiaa joita rakastan: syvähaastattelut joissa ihmisen kokemus tulee näkyväksi sekä tarinan rakentaminen joka tekee kokemuksesta merkityksellisen – haastatellulle itselleen ja tarinaa lukevalle ostajalle.</p>
+        <p>En ole toimialasi asiantuntija kuten sinä. Mikä on hyvä, sillä myöskään ostajasi ei ole. Juuri siksi osaan kirjoittaa hänelle.</p>
+        <p style="color: var(--ink); font-style: normal; font-family: var(--sans); font-size: 1rem;">— Jarkko Meretniemi</p>
+      </div>
+    </div>
+  </div>
+
   <section class="cta-section fade-in" style="max-width: 100%; padding: 6rem 2rem;">
     <div style="max-width: 680px; margin: 0 auto;">
       <h2>Haluatko tietää, puhutteleeko nykyinen asiakastarinanne oikeasti ostajaa?</h2>
@@ -213,26 +294,39 @@
         <li>missä se jää geneeriseksi</li>
         <li>mitä muuttamalla se voisi tukea myyntiä paremmin</li>
       </ul>
-      <a href="mailto:jarkko@jarkkomeretniemi.fi?subject=Asiakastarinan%20arvio&body=Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C" class="btn-light">Pyydä maksuton analyysi</a>
+      <a id="cta-email" class="btn-light" style="cursor:pointer;">Pyydä maksuton analyysi</a>
     </div>
   </section>
 
   <footer class="fade-in">
     <div class="footer-bio">
       <div class="name">Jarkko Meretniemi</div>
-      <p>Kirjoitan strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+      <p>Kirjoitan B2B-yrityksille strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
     </div>
     <div class="footer-links">
-      <a href="mailto:jarkko@jarkkomeretniemi.fi">jarkko@jarkkomeretniemi.fi</a>
+      <a id="footer-email"></a>
       <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn →</a>
     </div>
   </footer>
 
   <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+    // Build email in JS to prevent Cloudflare email obfuscation
+    (function() {
+      var u = 'jarkko';
+      var d = 'jarkkomeretniemi.fi';
+      var addr = u + '@' + d;
+      var subj = 'Asiakastarinan%20arvio';
+      var body = 'Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C';
+      var ctaEl = document.getElementById('cta-email');
+      if (ctaEl) { ctaEl.href = 'mail' + 'to:' + addr + '?subject=' + subj + '&body=' + body; }
+      var footerEl = document.getElementById('footer-email');
+      if (footerEl) { footerEl.href = 'mail' + 'to:' + addr; footerEl.textContent = addr; }
+    })();
   </script>
 
 </body>
