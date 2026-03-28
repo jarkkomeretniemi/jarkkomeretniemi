@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miksi useimmat asiakastarinat eivät vakuuta — Jarkko Meretniemi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1713;
+      --muted: #7a7060;
+      --accent: #c8401a;
+      --rule: #d4cbbf;
+      --ghost: #cdc5b8;
+      --serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+    html { font-size: 18px; scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem; border-bottom: 1px solid var(--rule); }
+    .logo { font-family: var(--serif); font-size: 1rem; font-style: italic; color: var(--ink); text-decoration: none; }
+    nav a.back { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; transition: opacity 0.2s; }
+    nav a.back:hover { opacity: 0.65; }
+
+    .page-hero { max-width: 680px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 700; line-height: 1.3; margin-bottom: 1.5rem; }
+    .page-hero p { color: var(--muted); font-size: 1rem; line-height: 1.8; }
+
+    .rule { border: none; border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; }
+
+    /* Iceberg */
+    .iceberg-section { max-width: 700px; margin: 0 auto; padding: 3rem 2rem 2rem; }
+    .iceberg-container { width: 100%; max-width: 560px; margin: 0 auto; }
+    .iceberg-svg { width: 100%; height: auto; }
+
+    /* Story section */
+    .story-section { max-width: 680px; margin: 0 auto; padding: 3rem 2rem 2rem; }
+    .story-section h2 { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--ink); text-align: center; }
+
+    .story-legend {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.78rem;
+      margin-bottom: 2.5rem;
+      justify-content: center;
+    }
+    .story-legend span {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .story-body {
+      font-size: 1rem;
+      line-height: 2;
+      color: var(--muted);
+    }
+    .story-body .red {
+      color: var(--accent);
+    }
+    .story-body .quote {
+      display: block;
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--ink);
+      margin-top: 1.5rem;
+      padding-left: 1.5rem;
+      border-left: 2px solid var(--accent);
+      line-height: 1.65;
+    }
+
+    .story-segment {
+      display: grid;
+      grid-template-columns: 1fr 140px;
+      gap: 1.5rem;
+      margin-bottom: 0;
+    }
+    .story-segment .segment-text {
+      font-size: 1rem;
+      line-height: 2;
+      color: var(--muted);
+    }
+    .story-segment .segment-text .red {
+      color: var(--accent);
+    }
+    .story-segment .segment-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--ghost);
+      padding-top: 0.35rem;
+      text-align: right;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 640px) {
+      .story-segment {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+      }
+      .story-segment .segment-label {
+        text-align: left;
+        padding-top: 0;
+        margin-bottom: 0.5rem;
+        order: -1;
+      }
+    }
+
+    /* After section */
+    .after-section { max-width: 680px; margin: 0 auto; padding: 2rem 2rem 4rem; }
+    .after-section p { color: var(--muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1rem; }
+    .after-section .closing {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.08rem;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-top: 1.5rem;
+    }
+    .after-section .closing .accent { color: var(--accent); }
+
+    .cta-section { background: var(--ink); color: var(--cream); text-align: center; max-width: 100%; padding: 6rem 2rem; }
+    .cta-section h2 { font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 700; line-height: 1.3; margin-bottom: 1.25rem; }
+    .cta-section p { font-size: 0.95rem; color: #b0a898; max-width: 500px; margin: 0 auto 1.5rem; }
+    .btn-light { display: inline-block; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 2.2rem; transition: background 0.2s; }
+    .btn-light:hover { background: var(--accent); color: white; }
+
+    footer { border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; padding: 3rem 2rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-bio .name { font-family: var(--serif); font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .footer-bio p { font-size: 0.88rem; color: var(--muted); max-width: 340px; line-height: 1.6; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+    .footer-links a { font-size: 0.88rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 1.5rem; }
+      .page-hero { padding: 4rem 1.5rem 2rem; }
+      .story-section { padding: 2.5rem 1.5rem 2rem; }
+      .after-section { padding: 2rem 1.5rem 3rem; }
+      footer { flex-direction: column; }
+      .footer-links { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Jarkko Meretniemi</a>
+    <a href="index.html" class="back">&larr; Takaisin</a>
+  </nav>
+
+  <div class="page-hero fade-in">
+    <h1>Miksi useimmat asiakastarinat eivät vakuuta — ja mitä niistä puuttuu</h1>
+    <p>Tavallinen referenssitarina näyttää vain jäävuoren huipun: mitä asiakas tarvitsi ja mitä toimitimme. Strateginen asiakastarina näyttää kaiken sen mikä on pinnan alla — ja juuri se saa ostajan tunnistamaan oman tilanteensa.</p>
+  </div>
+
+  <hr class="rule" />
+
+  <!-- Iceberg -->
+  <div class="iceberg-section fade-in">
+    <div class="iceberg-container">
+      <svg class="iceberg-svg" viewBox="0 0 560 560" xmlns="http://www.w3.org/2000/svg">
+        <!-- Sky -->
+        <rect x="0" y="0" width="560" height="210" fill="#f5f0e8"/>
+        <!-- Water -->
+        <rect x="0" y="210" width="560" height="350" fill="#e8f1f5"/>
+
+        <!-- Water line -->
+        <line x1="0" y1="210" x2="190" y2="210" stroke="#2a6f8e" stroke-width="2" opacity="0.3"/>
+        <line x1="370" y1="210" x2="560" y2="210" stroke="#2a6f8e" stroke-width="2" opacity="0.3"/>
+
+        <!-- Label ABOVE the iceberg -->
+        <text x="280" y="75" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="10" font-weight="500" fill="#c8401a" letter-spacing="1.5">TAVALLINEN REFERENSSI</text>
+
+        <!-- Iceberg above water - larger, outlined -->
+        <polygon points="190,210 280,95 370,210" fill="white" stroke="#c8401a" stroke-width="1.5" stroke-opacity="0.6"/>
+
+        <!-- Italic text inside the tip -->
+        <text x="280" y="148" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#c8401a" font-style="italic">Mitä asiakas</text>
+        <text x="280" y="165" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#c8401a" font-style="italic">tarvitsi ja mitä</text>
+        <text x="280" y="182" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#c8401a" font-style="italic">me toimitimme</text>
+
+        <!-- Iceberg below water -->
+        <polygon points="190,210 155,290 140,370 160,450 255,500 305,500 400,450 420,370 405,290 370,210" fill="white" fill-opacity="0.65" stroke="#7a7060" stroke-width="1" stroke-opacity="0.25"/>
+
+        <!-- Below: label -->
+        <text x="280" y="240" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="10" font-weight="500" fill="#7a7060" letter-spacing="1.5">STRATEGINEN ASIAKASTARINA</text>
+
+        <!-- Layer texts inside iceberg - same font size as above -->
+        <text x="280" y="290" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Miksi asiakkaan oli pakko muuttua?</text>
+        <text x="280" y="325" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Mitä jos mikään ei olisi muuttunut?</text>
+        <text x="280" y="360" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Miten oli yritetty ratkaista aiemmin?</text>
+        <text x="280" y="395" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Mitä ratkaisu muutti asiakkaan arjessa?</text>
+        <text x="280" y="430" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Miksi sillä on hänelle väliä?</text>
+      </svg>
+    </div>
+  </div>
+
+  <hr class="rule" />
+
+  <!-- Story -->
+  <div class="story-section fade-in">
+    <h2>Sama projekti, kaksi eri versiota – kumpi pysäyttää ostajan?</h2>
+
+      <!-- Ref version first -->
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+        <span class="legend-dot" style="background: var(--accent);"></span>
+        <span style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);">Tavallinen referenssi</span>
+      </div>
+
+      <div style="margin-bottom: 3rem; padding: 1.5rem 2rem; border: 1px solid var(--rule); background: white;">
+        <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8;">
+          <div>X on kuljetusalan yritys. He tarvitsivat räätälöidyn reittioptimointijärjestelmän.</div>
+          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Tarve</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8; margin-top: 0.6rem;">
+          <div>Toimitimme heille ratkaisun, joka ottaa huomioon yrityksen erityistarpeet.</div>
+          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Ratkaisu</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8; margin-top: 0.6rem;">
+          <div>Reittioptimoinnin ansiosta rekat pysyvät aikataulussa. Samoin polttoainekustannukset ovat laskeneet 18 %.</div>
+          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Hyödyt</div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8; margin-top: 0.6rem;">
+          <div>Kuljetusalan yrityksessä ollaan erittäin tyytyväisiä järjestelmään. "Mielettömän hyvää työtä. Vahva suositus."</div>
+          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Testimoniaali</div>
+        </div>
+      </div>
+
+      <!-- Strategic version label -->
+      <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1.5rem;">
+        <span class="legend-dot" style="background: var(--muted);"></span>
+        <span style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);">Strategiseksi asiakastarinaksi laajennettuna</span>
+      </div>
+
+    <div class="story-body">
+
+      <div class="story-segment">
+        <div class="segment-text">
+          <span class="red">X on kuljetusalan yritys.</span> Vuosi sitten heillä oltiin hankalassa tilanteessa. Perheyrityksen pitkäaikaisin asiakas uhkasi lähteä koska toimitusten aikataulut heittivät, mikä aiheutti heille ongelmia omien asiakkaidensa kanssa. Samoin kustannukset olivat karanneet liian korkeiksi. Asiakkuus ei ollut ainoastaan tärkeä kumppanuus: sen myötä liikevaihdosta lähtisi neljäsosa.
+        </div>
+        <div class="segment-label">Ongelma ja sen heijastus&shy;vaikutukset arjessa</div>
+      </div>
+
+      <br/>
+
+      <div class="story-segment">
+        <div class="segment-text">
+          Sekä aikatauluongelmat että polttoainekustannukset pystyttiin jäljittämään kuskien henkilökohtaisiin reittivalintoihin. Ne eivät olleet optimaalisia ruuhkien ja polttoainekulutuksen suhteen.
+          <br/><br/>
+          Aiemmin asiaa oli yritetty ratkoa kokeilemalla muutamaa valmista sovellusta, mutta niiden käyttö ei palvellut yrityksen tarpeita ja oli liian monimutkaista kuskeille.
+        </div>
+        <div class="segment-label">Aiemmat yritykset ratkaista ongelma</div>
+      </div>
+
+      <br/>
+
+      <div class="story-segment">
+        <div class="segment-text">
+          Siksi <span class="red">he tarvitsivat räätälöidyn reittioptimointijärjestelmän.</span> Vaikka yritys oli pakkoraossa, epäilyksiä aiheutti mahdollinen hinta ja se, ettei toimittajalla ollut aiempaa kokemusta toimialasta. Mutta toimittajan myyjä teki vaikutuksen: hän kuunteli alustavassa palaverissa tarkasti, vei toiveet suoraan kehittäjälle — ja muutamassa päivässä pöydällä oli pilottiversio joka istui tarpeisiin kuin hanska.
+        </div>
+        <div class="segment-label">Epäilys toimittajaa kohtaan ja sen hälveneminen</div>
+      </div>
+
+      <br/>
+
+      <div class="story-segment">
+        <div class="segment-text">
+          <span class="red">Toimitimme heille ratkaisun, joka ottaa huomioon yrityksen erityistarpeet</span> ja sopii käyttöliittymältään kuskien päivittäiseen työskentelyyn.
+          <br/><br/>
+          <span class="red">Reittioptimoinnin ansiosta rekat pysyvät aikataulussa,</span> mikä on johtanut heidän asiakkaansa toimitusvarmuuden vahvistumiseen. <span class="red">Samoin polttoainekustannukset ovat laskeneet 18 %,</span> minkä ansiosta hintaa asiakkaaseen päin voitiin laskea. Muuttuneen tilanteen ansiosta asiakas uusi sopimuksen kolmeksi vuodeksi.
+        </div>
+        <div class="segment-label">Muutos ja sen konkreettiset vaikutukset</div>
+      </div>
+
+      <br/>
+
+      <div class="story-segment">
+        <div class="segment-text">
+          <span class="red">Kuljetusalan yrityksessä ollaan erittäin tyytyväisiä järjestelmään</span> ja muutokseen jonka se on mahdollistanut.
+          <span class="quote">"Olen huojentunut että saimme pidettyä asiakkaan. Heillä muistellaan yhä lämmöllä kuollutta isääni, jonka kanssa he ehtivät tehdä töitä pari vuosikymmentä. Minulle tämä työ on sekä bisnestä että henkilökohtainen asia. Nyt pystyn nukkumaan yöni rauhassa. <span class="red">Mielettömän hyvää työtä. Vahva suositus.</span>"</span>
+        </div>
+        <div class="segment-label">Muutoksen merkitys asiakkaalle</div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="rule" />
+
+  <!-- Closing -->
+  <div class="after-section fade-in">
+    <p>Punaisella merkityt lauseet ovat se mitä tavallinen referenssi kertoo. Harmaat lauseet ovat se, mikä saa ostajan kiinnostumaan tarinasta ja peilaamaan sitä omaan tilanteeseensa.</p>
+    <p>Sama projekti. Mutta vain toinen tarina pysäyttää ostajan.</p>
+  </div>
+
+  <section class="cta-section fade-in">
+    <div style="max-width: 680px; margin: 0 auto;">
+      <h2>Haluatko tietää, puhutteleeko nykyinen asiakastarinanne oikeasti ostajaa?</h2>
+      <p>Lähetä minulle linkki nykyiseen caseen tai referenssisivuun. Saat suoran näkemyksen siitä, mikä toimii ja mitä muuttamalla se tukisi myyntiä paremmin.</p>
+      <a id="cta-email" class="btn-light" style="cursor:pointer;">Pyydä maksuton analyysi</a>
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <div class="footer-bio">
+      <div class="name">Jarkko Meretniemi</div>
+      <p>Kirjoitan B2B-yrityksille strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+    </div>
+    <div class="footer-links">
+      <a id="footer-email"></a>
+      <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn &rarr;</a>
+    </div>
+  </footer>
+
+  <script>
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+    (function() {
+      var u = 'jarkko';
+      var d = 'jarkkomeretniemi.fi';
+      var addr = u + '@' + d;
+      var subj = 'Asiakastarinan%20arvio';
+      var body = 'Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C';
+      var ctaEl = document.getElementById('cta-email');
+      if (ctaEl) { ctaEl.href = 'mail' + 'to:' + addr + '?subject=' + subj + '&body=' + body; }
+      var footerEl = document.getElementById('footer-email');
+      if (footerEl) { footerEl.href = 'mail' + 'to:' + addr; footerEl.textContent = addr; }
+    })();
+  </script>
+
+</body>
+</html>
