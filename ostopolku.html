@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5 kohtaa joissa ostajan luottamus rakennetaan — Jarkko Meretniemi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1713;
+      --muted: #7a7060;
+      --accent: #c8401a;
+      --rule: #d4cbbf;
+      --serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+    html { font-size: 18px; scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem; border-bottom: 1px solid var(--rule); }
+    .logo { font-family: var(--serif); font-size: 1rem; font-style: italic; color: var(--ink); text-decoration: none; }
+    nav a.back { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; transition: opacity 0.2s; }
+    nav a.back:hover { opacity: 0.65; }
+
+    .page-hero { max-width: 680px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 700; line-height: 1.3; margin-bottom: 1.5rem; }
+    .page-hero p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+
+    .rule { border: none; border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; }
+
+    .funnel-section { max-width: 680px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+
+    .funnel-timeline {
+      position: relative;
+      padding-left: 3.5rem;
+    }
+    .funnel-timeline::before {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: var(--accent);
+      opacity: 0.25;
+    }
+
+    .funnel-beat {
+      position: relative;
+      padding-bottom: 3rem;
+    }
+    .funnel-beat:last-child { padding-bottom: 0; }
+    .funnel-beat::before {
+      content: '';
+      position: absolute;
+      left: -3.5rem;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background: var(--accent);
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .funnel-beat .phase-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+    .funnel-beat .phase-title {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+    .funnel-beat .phase-function {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 0.6rem;
+    }
+    .funnel-beat .phase-formats {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+    .funnel-beat .phase-formats span {
+      color: var(--ink);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .after-section { max-width: 680px; margin: 0 auto; padding: 3rem 2rem 4rem; }
+    .after-section p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+    .after-section .closing {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.08rem;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-top: 1.5rem;
+    }
+    .after-section .closing .accent { color: var(--accent); }
+
+    .cta-section { background: var(--ink); color: var(--cream); text-align: center; max-width: 100%; padding: 6rem 2rem; }
+    .cta-section h2 { font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 700; line-height: 1.3; margin-bottom: 1.25rem; }
+    .cta-section p { font-size: 0.95rem; color: #b0a898; max-width: 500px; margin: 0 auto 1.5rem; }
+    .btn-light { display: inline-block; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 2.2rem; transition: background 0.2s; }
+    .btn-light:hover { background: var(--accent); color: white; }
+
+    footer { border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; padding: 3rem 2rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-bio .name { font-family: var(--serif); font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .footer-bio p { font-size: 0.88rem; color: var(--muted); max-width: 340px; line-height: 1.6; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+    .footer-links a { font-size: 0.88rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 1.5rem; }
+      .page-hero { padding: 4rem 1.5rem 2rem; }
+      .funnel-section { padding: 2.5rem 1.5rem 3rem; }
+      .after-section { padding: 2.5rem 1.5rem 3rem; }
+      footer { flex-direction: column; }
+      .footer-links { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Jarkko Meretniemi</a>
+    <a href="index.html" class="back">&larr; Takaisin</a>
+  </nav>
+
+  <div class="page-hero fade-in">
+    <h1>5 kohtaa joissa ostajan luottamus rakennetaan</h1>
+    <p>Ostajan luottamus pitää ansaita ennen kuin hän on valmis tekemään ostopäätöksen. Strateginen asiakastarina rakentaa tuota luottamusta myyntiprosessin jokaisessa vaiheessa.</p>
+  </div>
+
+  <hr class="rule" />
+
+  <div class="funnel-section fade-in">
+    <div class="funnel-timeline">
+
+      <div class="funnel-beat">
+        <div class="phase-label">Prospektointi</div>
+        <div class="phase-title">Et myy vaan annat asiakkaan päätellä</div>
+        <div class="phase-function">Jaat tarinan josta näkee, miten prospektin kaltainen yritys sai ratkottua tutun ongelman ja miten elämä sen seurauksena muuttui. Et väitä mitään vaan annat hänen itse tunnistaa yhteyden. Se on uskottavampaa kuin mikään myyntiviesti.</div>
+        <div class="phase-formats"><span>Käytä:</span> LinkedIn-postauksena, kylmämeilin liitteenä</div>
+      </div>
+
+      <div class="funnel-beat">
+        <div class="phase-label">Kvalifiointi</div>
+        <div class="phase-title">Ostaja näkee itsensä</div>
+        <div class="phase-function">Tarina näyttää asiakkaan ongelman kipeät heijastusvaikutukset ja muistuttaa panosten suuruudesta. Se saa ostajan peilaamaan omaa tilannettaan ja ymmärtämään, että jotain on pakko tehdä.</div>
+        <div class="phase-formats"><span>Käytä:</span> verkkosivuilla, uutiskirjeessä</div>
+      </div>
+
+      <div class="funnel-beat">
+        <div class="phase-label">Tarjous</div>
+        <div class="phase-title">Anna asiakkaan puhua puolestasi</div>
+        <div class="phase-function">Kun ostaja vertailee vaihtoehtoja, aito asiakas puhuu puolestasi tehokkaammin kuin mikään myyntiväite. Tarina todistaa että olette pystyneet auttamaan ostajan kaltaista asiakasta aiemminkin.</div>
+        <div class="phase-formats"><span>Käytä:</span> tarjouksen liitteenä, myyntideckin slidena</div>
+      </div>
+
+      <div class="funnel-beat">
+        <div class="phase-label">Klousaus</div>
+        <div class="phase-title">Ostaja saa työkalun jolla perustella päätöstä muille</div>
+        <div class="phase-function">Usein ostaja ei ole se joka tekee lopullisen päätöksen. Tarina on myynnin työkalu ostajan oman organisaation sisällä. Se perustelee päätöksen niille, jotka istuvat rahakirstun päällä.</div>
+        <div class="phase-formats"><span>Käytä:</span> taitettuna PDF:nä</div>
+      </div>
+
+      <div class="funnel-beat">
+        <div class="phase-label">Lisämyynti &amp; suosittelu</div>
+        <div class="phase-title">Kokemuksen sanallistaminen tuo arvoa myös asiakkaalle</div>
+        <div class="phase-function">Jo tarinan tekeminen asiakkaasta on suhteen syventämistä. Haastattelu on asiakkaalle mahdollisuus pysähtyä oman kokemuksensa ääreen ja sanallistaa se. Sillä on merkitystä. Ja valmis tarina on konkreettinen jälki siitä mitä yhdessä on saavutettu.</div>
+        <div class="phase-formats"><span>Käytä:</span> asiakaslehdessä, yhteispostauksena</div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="rule" />
+
+  <div class="after-section fade-in">
+    <p>Jokainen tarina ei tarvitse tusinaa sovellusta. Mutta jokainen strateginen asiakastarina voi rakentaa luottamusta missä tahansa näistä vaiheista. Ja kun tarinoita kertyy, ne kattavat koko myyntiprosessin.</p>
+    <p class="closing">Siksi strateginen asiakastarina ei ole kulu. <span class="accent">Se on investointi joka rakentaa luottamusta jokaisessa vaiheessa.</span></p>
+  </div>
+
+  <section class="cta-section fade-in">
+    <div style="max-width: 680px; margin: 0 auto;">
+      <h2>Haluatko tietää, puhutteleeko nykyinen asiakastarinanne oikeasti ostajaa?</h2>
+      <p>Lähetä minulle linkki nykyiseen caseen tai referenssisivuun. Saat suoran näkemyksen siitä, mikä toimii ja mitä muuttamalla se tukisi myyntiä paremmin.</p>
+      <a id="cta-email" class="btn-light" style="cursor:pointer;">Pyydä maksuton analyysi</a>
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <div class="footer-bio">
+      <div class="name">Jarkko Meretniemi</div>
+      <p>Kirjoitan B2B-yrityksille strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+    </div>
+    <div class="footer-links">
+      <a id="footer-email"></a>
+      <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn &rarr;</a>
+    </div>
+  </footer>
+
+  <script>
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+    (function() {
+      var u = 'jarkko';
+      var d = 'jarkkomeretniemi.fi';
+      var addr = u + '@' + d;
+      var subj = 'Asiakastarinan%20arvio';
+      var body = 'Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C';
+      var ctaEl = document.getElementById('cta-email');
+      if (ctaEl) { ctaEl.href = 'mail' + 'to:' + addr + '?subject=' + subj + '&body=' + body; }
+      var footerEl = document.getElementById('footer-email');
+      if (footerEl) { footerEl.href = 'mail' + 'to:' + addr; footerEl.textContent = addr; }
+    })();
+  </script>
+
+</body>
+</html>

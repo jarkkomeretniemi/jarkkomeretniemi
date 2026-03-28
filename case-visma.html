@@ -22,30 +22,45 @@
     body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem; border-bottom: 1px solid var(--rule); }
     .logo { font-family: var(--serif); font-size: 1rem; font-style: italic; color: var(--ink); text-decoration: none; }
-    nav a.back { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.04em; color: var(--muted); text-decoration: none; transition: color 0.2s; }
-    nav a.back:hover { color: var(--accent); }
-    .article { max-width: 680px; margin: 0 auto; padding: 5rem 2rem; }
-    .client-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; }
-    h1 { font-family: var(--serif); font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 2.5rem; }
-    .rule { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
-    .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem; margin-top: 2.5rem; display: block; }
-    h2 { font-family: var(--serif); font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; line-height: 1.3; margin-bottom: 1rem; margin-top: 0.5rem; }
-    p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
-    p:last-child { margin-bottom: 0; }
-    .cta-section { background: var(--ink); color: var(--cream); text-align: center; padding: 5rem 2rem; margin-top: 4rem; }
-    .cta-section h2 { font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 700; line-height: 1.3; margin-bottom: 1rem; max-width: 480px; margin-left: auto; margin-right: auto; color: var(--cream); }
-    .cta-section p { font-size: 0.9rem; color: #b0a898; max-width: 420px; margin: 0 auto 1.5rem; }
+    nav a.back { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; transition: opacity 0.2s; }
+    nav a.back:hover { opacity: 0.65; }
+
+    .case-hero { max-width: 680px; margin: 0 auto; padding: 6rem 2rem 2rem; }
+    .case-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; }
+    .case-hero h1 { font-family: var(--serif); font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 700; line-height: 1.3; letter-spacing: -0.01em; }
+
+    .rule { border: none; border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; }
+
+    .content { max-width: 680px; margin: 0 auto; padding: 3rem 2rem; }
+    .content h2 { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--ink); }
+    .content p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+    .content p:last-child { margin-bottom: 0; }
+    .content .highlight { color: var(--ink); }
+    .content .quote { font-family: var(--serif); font-style: italic; color: var(--ink); font-size: 1rem; line-height: 1.6; margin: 1.5rem 0; padding-left: 1.5rem; border-left: 2px solid var(--accent); }
+
+    .read-link { display: inline-block; font-size: 0.88rem; font-weight: 500; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; transition: opacity 0.2s; margin-top: 0.5rem; }
+    .read-link:hover { opacity: 0.65; }
+
+    .cta-section { background: var(--ink); color: var(--cream); text-align: center; max-width: 100%; padding: 6rem 2rem; }
+    .cta-section h2 { font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 700; line-height: 1.3; margin-bottom: 1.25rem; }
+    .cta-section p { font-size: 0.95rem; color: #b0a898; max-width: 500px; margin: 0 auto 1.5rem; }
     .btn-light { display: inline-block; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 2.2rem; transition: background 0.2s; }
     .btn-light:hover { background: var(--accent); color: white; }
+
     footer { border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; padding: 3rem 2rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
     .footer-bio .name { font-family: var(--serif); font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
     .footer-bio p { font-size: 0.88rem; color: var(--muted); max-width: 340px; line-height: 1.6; }
     .footer-links { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
     .footer-links a { font-size: 0.88rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--accent); }
+
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
     @media (max-width: 640px) {
       nav { padding: 1.5rem; }
-      .article { padding: 3rem 1.5rem; }
+      .case-hero { padding: 4rem 1.5rem 2rem; }
+      .content { padding: 2.5rem 1.5rem; }
       footer { flex-direction: column; }
       .footer-links { text-align: left; }
     }
@@ -53,49 +68,92 @@
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="logo">Jarkko Meretniemi</a>
-  <a href="index.html" class="back">← Takaisin</a>
-</nav>
+  <nav>
+    <a href="index.html" class="logo">Jarkko Meretniemi</a>
+    <a href="index.html" class="back">&larr; Takaisin</a>
+  </nav>
 
-<div class="article">
-  <p class="client-label">Case Visma</p>
-  <h1>Monimutkaisen tuotteen arvo havainnollistui ostajalle asiakastarinan kautta</h1>
-
-  <span class="section-label">Alkutilanne</span>
-  <p>Visman ERP-ratkaisu automatisoi liiketoiminnan prosesseja — mutta aihe on tekninen. Potentiaalisten asiakkaiden oli vaikea nähdä, miten järjestelmä hyödyttäisi juuri heidän arkeaan. Visman aiemmat tarinat jäivät helposti tuoteominaisuuksien listaukseksi.</p>
-
-  <hr class="rule">
-
-  <span class="section-label">Tarina</span>
-  <h2>Telasyöttö menestyksen ytimessä</h2>
-  <p>Haastattelin Visman asiakkaan, metsäkoneyritys Kone-Ketosen edustajan. Tarina lähti liikkeelle yrityksen perustajan 1980-luvun keksinnöstä — ja siitä, miten kasvu ja kansainvälistyminen pakottivat etsimään parempia työkaluja. ERP ei ollut tarinassa tuote vaan ratkaisu, joka tuki perheyrityksen kasvua.</p>
-  <p><a href="case-visma-tarina.html" style="color: var(--accent); font-family: var(--sans); font-size: 0.9rem; letter-spacing: 0.04em;">Lue tarina →</a></p>
-
-  <hr class="rule">
-
-  <span class="section-label">Muutos</span>
-  <p>Visman markkinointitiimi pani erityisesti merkille, että tarinasta kuului asiakkaan ääni muista refejutuista poikkeavalla tavalla. Toisin kuin teknisempien case-esittelyiden kohdalla, Kone-Ketosen tarina "teki mieli lukea loppuun".</p>
-  <p>Sitä käytetään Visma Novan myynnissä edelleen vuosia julkaisun jälkeen.</p>
-
-</div>
-
-<div class="cta-section">
-  <h2>Haluatko tietää, puhutteleeko nykyinen asiakastarinanne oikeasti ostajaa?</h2>
-  <p>Lähetä minulle linkki nykyiseen caseen tai referenssisivuun. Saat suoran näkemyksen siitä, mikä toimii ja mitä muuttamalla se tukisi myyntiä paremmin.</p>
-  <a href="mailto:jarkko@jarkkomeretniemi.fi?subject=Asiakastarinan%20arvio&body=Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C" class="btn-light">Pyydä maksuton analyysi</a>
-</div>
-
-<footer>
-  <div class="footer-bio">
-    <div class="name">Jarkko Meretniemi</div>
-    <p>Kirjoitan strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+  <div class="case-hero fade-in">
+    <div class="case-label">Case Visma</div>
+    <h1>Miten monimutkaisesta ERP-tuotteesta tuli tarina jonka "tekee mieli lukea loppuun"</h1>
   </div>
-  <div class="footer-links">
-    <a href="mailto:jarkko@jarkkomeretniemi.fi">jarkko@jarkkomeretniemi.fi</a>
-    <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn →</a>
+
+  <hr class="rule" />
+
+  <div class="content fade-in">
+    <h2>Ongelma</h2>
+    <p>Visma Nova on ERP-ratkaisu, joka automatisoi liiketoiminnan prosesseja. Aihe on tekninen, ja aiemmat asiakastarinat näyttivät siltä miltä ne yleensä näyttävät: lyhyt yritysesittely, kuvaus tarpeesta, toimitus, hyödyt, kehut yhteistyöstä. Kaikki totta. Mutta ei mitään mikä pysäyttäisi ostajan.</p>
+    <p>Referenssit puhuivat tuotteesta, ei ihmisistä. Ostajan oli vaikea tunnistaa itseään ylätasolle jäävästä tekstistä.</p>
+    <p>Visma halusi tarinan joka tekisi sen toisin.</p>
   </div>
-</footer>
+
+  <hr class="rule" />
+
+  <div class="content fade-in">
+    <h2>Oivallus</h2>
+    <p>Haastattelin Visman asiakasyrityksen, Kone-Ketosen operatiivisen vetäjän. Jutellessamme hän mainitsi isänsä patentoidun keksinnön, metsäkoneiden telasyöttömekanismin, jonka varaan yrityksen koko myöhempi menestys perustui.</p>
+    <p>Vaikka hän sanoi sen ohimennen, tajusin että siinä oli tarinan pihvi.</p>
+    <p>Ei ERP-järjestelmä vaan keksintö ja sen ympärille rakentunut perheyritys.</p>
+  </div>
+
+  <hr class="rule" />
+
+  <div class="content fade-in">
+    <h2>Tarina</h2>
+    <p>Aloitin tarinan case-esittelyille epätyypillisesti asiakasyrityksen syntyhistoriasta: miten perheen isä törmäsi ongelmaan insinööriopiskelijana 1970-luvulla ja miten hän ratkoi sen.</p>
+    <p>Pidin tärkeänä että lukija ymmärtää keksinnön mekaniikan ja eron muihin ratkaisuihin, koska ilman sitä hän ei ymmärtäisi asiakasyritystä eikä myöhemmin ERPin merkitystä heille.</p>
+    <p>Kuvasin miten yksi innovaatio synnytti yrityksen ja kymmeniä muita innovaatioita, miten kasvu ja kansainvälistyminen toivat mukanaan uudenlaisia haasteita, ja miten Visma Nova oli ratkaisu juuri niihin.</p>
+    <p>ERP-järjestelmän hyödyt ovat abstrakteja kunnes ne näkee asiakkaan arjessa ja niiden asioiden kautta jotka ovat hänelle merkityksellisiä. Silloin tuote herää eloon myös ostajalle.</p>
+  </div>
+
+  <hr class="rule" />
+
+  <div class="content fade-in">
+    <h2>Mitä väliä</h2>
+    <p>Visman markkinointitiimi sanoi, että tarinasta kuuluu asiakkaan ääni tavalla joka erottuu muista referensseistä. Kun teknisemmät case-esittelyt saattavat olla raskassoutuisia, tämä "teki mieli lukea loppuun".</p>
+    <p>Asiakastarinaa käytetään edelleen Visma Novan myymiseen vuosia julkaisun jälkeen.</p>
+    <a href="case-visma-tarina.html" class="read-link">Lue tarina &rarr;</a>
+  </div>
+
+  <hr class="rule" />
+
+  <section class="cta-section fade-in">
+    <div style="max-width: 680px; margin: 0 auto;">
+      <h2>Haluatko tietää, puhutteleeko nykyinen asiakastarinanne oikeasti ostajaa?</h2>
+      <p>Lähetä minulle linkki nykyiseen caseen tai referenssisivuun. Saat suoran näkemyksen siitä, mikä toimii ja mitä muuttamalla se tukisi myyntiä paremmin.</p>
+      <a id="cta-email" class="btn-light" style="cursor:pointer;">Pyydä maksuton analyysi</a>
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <div class="footer-bio">
+      <div class="name">Jarkko Meretniemi</div>
+      <p>Kirjoitan B2B-yrityksille strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+    </div>
+    <div class="footer-links">
+      <a id="footer-email"></a>
+      <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn &rarr;</a>
+    </div>
+  </footer>
+
+  <script>
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+    (function() {
+      var u = 'jarkko';
+      var d = 'jarkkomeretniemi.fi';
+      var addr = u + '@' + d;
+      var subj = 'Asiakastarinan%20arvio';
+      var body = 'Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C';
+      var ctaEl = document.getElementById('cta-email');
+      if (ctaEl) { ctaEl.href = 'mail' + 'to:' + addr + '?subject=' + subj + '&body=' + body; }
+      var footerEl = document.getElementById('footer-email');
+      if (footerEl) { footerEl.href = 'mail' + 'to:' + addr; footerEl.textContent = addr; }
+    })();
+  </script>
 
 </body>
 </html>
