@@ -117,22 +117,35 @@
 
 </div>
 
-<div class="cta-section">
-  <h2>Haluatko tietää, puhutteleeko nykyinen asiakastarinanne oikeasti ostajaa?</h2>
-  <p>Lähetä minulle linkki nykyiseen caseen tai referenssisivuun. Saat suoran näkemyksen siitä, mikä toimii ja mitä muuttamalla se tukisi myyntiä paremmin.</p>
-  <a href="mailto:jarkko@jarkkomeretniemi.fi?subject=Asiakastarinan%20arvio&body=Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C" class="btn-light">Pyydä maksuton analyysi</a>
-</div>
+<footer class="fade-in">
+    <div class="footer-bio">
+      <div class="name">Jarkko Meretniemi</div>
+      <p>Kirjoitan B2B-yrityksille strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+    </div>
+    <div class="footer-links">
+      <a id="footer-email"></a>
+      <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn &rarr;</a>
+    </div>
+  </footer>
 
-<footer>
-  <div class="footer-bio">
-    <div class="name">Jarkko Meretniemi</div>
-    <p>Kirjoitan strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
-  </div>
-  <div class="footer-links">
-    <a href="mailto:jarkko@jarkkomeretniemi.fi">jarkko@jarkkomeretniemi.fi</a>
-    <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn →</a>
-  </div>
-</footer>
+  <script>
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+    (function() {
+      var u = 'jarkko';
+      var d = 'jarkkomeretniemi.fi';
+      var addr = u + '@' + d;
+      var subj = 'Asiakastarinan%20arvio';
+      var body = 'Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C';
+      var ctaEl = document.getElementById('cta-email');
+      if (ctaEl) { ctaEl.href = 'mail' + 'to:' + addr + '?subject=' + subj + '&body=' + body; }
+      var footerEl = document.getElementById('footer-email');
+      if (footerEl) { footerEl.href = 'mail' + 'to:' + addr; footerEl.textContent = addr; }
+    })();
+  </script>
 
 </body>
 </html>
