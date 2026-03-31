@@ -115,6 +115,12 @@
         margin-bottom: 0.5rem;
         order: -1;
       }
+      .ref-label {
+        display: none !important;
+      }
+      .ref-grid-row {
+        grid-template-columns: 1fr !important;
+      }
     }
 
     /* After section */
@@ -225,19 +231,19 @@
       <div style="margin-bottom: 3rem; padding: 1.5rem 2rem; border: 1px solid var(--rule); background: white;">
         <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8;">
           <div>X on kuljetusalan yritys. He tarvitsivat räätälöidyn reittioptimointijärjestelmän.</div>
-          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Tarve</div>
+          <div class="ref-label" style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Tarve</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8; margin-top: 0.6rem;">
           <div>Toimitimme heille ratkaisun, joka ottaa huomioon yrityksen erityistarpeet.</div>
-          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Ratkaisu</div>
+          <div class="ref-label" style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Ratkaisu</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8; margin-top: 0.6rem;">
           <div>Reittioptimoinnin ansiosta rekat pysyvät aikataulussa. Samoin polttoainekustannukset ovat laskeneet 18 %.</div>
-          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Hyödyt</div>
+          <div class="ref-label" style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Hyödyt</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8; margin-top: 0.6rem;">
           <div>Kuljetusalan yrityksessä ollaan erittäin tyytyväisiä järjestelmään. "Mielettömän hyvää työtä. Vahva suositus."</div>
-          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Testimoniaali</div>
+          <div class="ref-label" style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Testimoniaali</div>
         </div>
       </div>
 

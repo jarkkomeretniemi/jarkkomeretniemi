@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Case Suomi Leasing – Jarkko Meretniemi</title>
+  <title>Case Suomi Leasing — Jarkko Meretniemi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -22,98 +22,32 @@
     body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
     nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem; border-bottom: 1px solid var(--rule); }
     .logo { font-family: var(--serif); font-size: 1rem; font-style: italic; color: var(--ink); text-decoration: none; }
-    nav a.cta-nav { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; transition: opacity 0.2s; }
-    nav a.cta-nav:hover { opacity: 0.65; }
+    nav a.back { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; transition: opacity 0.2s; }
+    nav a.back:hover { opacity: 0.65; }
 
-    .hero { max-width: 760px; margin: 0 auto; padding: 8rem 2rem 6rem; text-align: center; }
-    .hero h1 { font-family: var(--serif); font-size: clamp(1.8rem, 4.5vw, 3rem); font-weight: 700; line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 1.5rem; }
-    .hero h1 em { font-style: italic; color: var(--accent); }
-    .hero .sub { font-size: 1.05rem; color: var(--muted); max-width: 560px; margin: 0 auto 1rem; line-height: 1.75; }
-    .btn { display: inline-block; background: var(--ink); color: var(--cream); font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 2.2rem; transition: background 0.2s, transform 0.15s; margin-top: 1.5rem; }
-    .btn:hover { background: var(--accent); transform: translateY(-1px); }
+    .case-hero { max-width: 680px; margin: 0 auto; padding: 6rem 2rem 2rem; }
+    .case-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.2rem; }
+    .case-hero h1 { font-family: var(--serif); font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 700; line-height: 1.3; letter-spacing: -0.01em; }
 
     .rule { border: none; border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; }
 
-    .body-block { max-width: 680px; margin: 0 auto; padding: 4rem 2rem; }
-    .body-block .intro { font-family: var(--serif); font-size: clamp(1.2rem, 2.5vw, 1.55rem); font-weight: 700; color: var(--ink); line-height: 1.35; margin-bottom: 1.4rem; }
-    .body-block p { color: var(--muted); margin-bottom: 1rem; font-size: 1rem; line-height: 1.8; }
-    .body-block p:last-child { margin-bottom: 0; }
-    .body-block .closing { font-family: var(--serif); font-style: italic; font-size: 1.08rem; color: var(--ink); margin-top: 1.4rem; line-height: 1.55; }
-    .body-block .closing .accent { color: var(--accent); }
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 680px; margin: 0 auto; padding: 3rem 2rem; }
+    .stat-number { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 0.5rem; }
+    .stat-label { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
 
-    .metodi-block { max-width: 680px; margin: 0 auto; padding: 5rem 2rem; }
-    .metodi-block .accent { color: var(--accent); }
-    .metodi-block .metodi-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.4rem; }
-    .metodi-block p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
-    .metodi-block p:last-child { margin-bottom: 0; color: var(--ink); font-style: italic; font-family: var(--serif); font-size: 1rem; }
+    .content { max-width: 680px; margin: 0 auto; padding: 3rem 2rem; }
+    .content h2 { font-family: var(--serif); font-size: 1.15rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--ink); }
+    .content p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+    .content p:last-child { margin-bottom: 0; }
 
-    section { max-width: 680px; margin: 0 auto; padding: 5rem 2rem; }
+    .read-link { display: inline-block; font-size: 0.88rem; font-weight: 500; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 2px; transition: opacity 0.2s; margin-top: 0.5rem; }
+    .read-link:hover { opacity: 0.65; }
+    .read-link-secondary { display: inline-block; font-size: 0.88rem; font-weight: 500; color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 2px; transition: opacity 0.2s; margin-top: 0.5rem; margin-left: 1.5rem; }
+    .read-link-secondary:hover { opacity: 0.65; }
 
-    .cases-section { padding-top: 5rem; }
-    .cases-section h2 { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; font-style: italic; color: var(--muted); margin-bottom: 3rem; }
-
-    .case-card { margin-bottom: 2.5rem; }
-    .case-card:last-child { margin-bottom: 0; }
-
-    .case-card-category {
-      font-size: 0.72rem;
-      font-weight: 500;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 0.6rem;
-    }
-
-    .case-card-link {
-      background: white;
-      padding: 2rem 2.2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
-      text-decoration: none;
-      color: inherit;
-      transition: background 0.2s;
-    }
-    .case-card-link:hover { background: #ede8df; }
-
-    .case-card-label {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-    }
-    .case-card-link p {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      line-height: 1.5;
-      color: var(--ink);
-    }
-    .case-card-link .arrow {
-      font-size: 1.1rem;
-      color: var(--accent);
-      flex-shrink: 0;
-      margin-top: 0.15rem;
-      transition: transform 0.2s;
-    }
-    .case-card-link:hover .arrow { transform: translateX(4px); }
-
-    .process h2 { font-family: var(--serif); font-size: clamp(1.1rem, 2.5vw, 1.4rem); font-weight: 700; margin-bottom: 2.5rem; }
-    .steps { display: flex; flex-direction: column; }
-    .step { display: grid; grid-template-columns: 2.5rem 1fr; gap: 1.2rem; padding: 1.8rem 0; border-top: 1px solid var(--rule); }
-    .step:last-child { border-bottom: none; }
-    .step-num { font-family: var(--serif); font-size: 0.85rem; color: var(--accent); padding-top: 0.15rem; font-style: italic; }
-    .step-body p { font-size: 0.95rem; color: var(--muted); }
-    .step-body strong { display: block; color: var(--ink); font-weight: 500; margin-bottom: 0.3rem; }
-
-    .cta-section { background: var(--ink); color: var(--cream); text-align: center; }
+    .cta-section { background: var(--ink); color: var(--cream); text-align: center; max-width: 100%; padding: 6rem 2rem; }
     .cta-section h2 { font-family: var(--serif); font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 700; line-height: 1.3; margin-bottom: 1.25rem; }
-    .cta-section p { font-size: 0.95rem; color: #b0a898; max-width: 500px; margin: 0 auto 0.75rem; }
-    .cta-list { list-style: none; font-size: 0.9rem; color: #b0a898; margin: 1rem auto 2rem; max-width: 400px; }
-    .cta-list li { padding: 0.2rem 0; }
-    .cta-list li::before { content: "\2192 "; color: var(--accent); }
+    .cta-section p { font-size: 0.95rem; color: #b0a898; max-width: 500px; margin: 0 auto 1.5rem; }
     .btn-light { display: inline-block; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; padding: 0.9rem 2.2rem; transition: background 0.2s; }
     .btn-light:hover { background: var(--accent); color: white; }
 
@@ -129,9 +63,10 @@
 
     @media (max-width: 640px) {
       nav { padding: 1.5rem; }
-      section { padding: 4rem 1.5rem; }
-      .body-block { padding: 3rem 1.5rem; }
-      .metodi-block { padding: 3rem 1.5rem; }
+      .case-hero { padding: 4rem 1.5rem 2rem; }
+      .content { padding: 2.5rem 1.5rem; }
+      .stat-row { grid-template-columns: 1fr; gap: 1.5rem; padding: 2.5rem 1.5rem; }
+      .read-link-secondary { margin-left: 0; display: block; margin-top: 0.8rem; }
       footer { flex-direction: column; }
       .footer-links { text-align: left; }
     }
@@ -139,79 +74,107 @@
 </head>
 <body>
 
-<nav>
-  <a href="index.html" class="logo">Jarkko Meretniemi</a>
-  <a href="index.html" class="back">← Takaisin</a>
-</nav>
+  <nav>
+    <a href="index.html" class="logo">Jarkko Meretniemi</a>
+    <a href="index.html" class="back">&larr; Takaisin</a>
+  </nav>
 
-<div class="article">
-  <p class="client-label">Case Suomi Leasing</p>
-  <h1>Näin leasing-yritys seitsenkertaisti rahoitushakemusten määrän – asiakastarinan avulla</h1>
+  <div class="case-hero fade-in">
+    <div class="case-label">Tuloksia</div>
+    <h1>Näin leasing-yritys seitsenkertaisti rahoitushakemusten määrän – asiakastarinan avulla</h1>
+  </div>
 
-  <div class="stat-row">
+  <div class="stat-row fade-in">
     <div>
-      <div class="stat-number">7×</div>
+      <div class="stat-number">7&times;</div>
       <div class="stat-label">Rahoitushakemusten määrän kasvu kampanjan aikana</div>
     </div>
     <div>
       <div class="stat-number">16,91%</div>
-      <div class="stat-label">Prosenttiosuus tarinan lukijoista jotka klikkasivat mainostajan sivulle — saman median keskiarvo on 1–2 %. Tarinan CTR oli 10-kertainen.</div>
+      <div class="stat-label">Tarinan lukijoista klikkasi mainostajan sivulle — median keskiarvo 1–2 %. CTR oli 10-kertainen.</div>
     </div>
     <div>
-      <div class="stat-number">4 min 54 s</div>
-      <div class="stat-label">Lukemiseen käytetty keskimääräinen aika — muiden advertoriaalien keskiarvo oli 90 sekuntia. Tarinan lukuaika oli 3-kertainen.</div>
+      <div class="stat-number">4:54</div>
+      <div class="stat-label">Keskimääräinen lukuaika — muiden advertoriaalien keskiarvo 90 s. Lukuaika oli 3-kertainen.</div>
     </div>
   </div>
 
-  <span class="section-label">Alkutilanne</span>
-  <p>Leasing-yrittäjä oli ostanut mainospaikan verkkolehdestä. Kohderyhmä – maatalousyrittäjät – oli juuri pohtimassa rahoitukseen liittyviä kysymyksiä, sillä alan koneita esittelevät messut olivat käynnistymässä. Momentum oli nyt. Hän tarvitsi yritysesittelyn nopeasti, mutta pelkäsi että leasing-aihe jää tylsäksi.</p>
-  <p>Tavallinen ratkaisu olisi ollut yritysesittely: keitä olemme, mitä tarjoamme, miksi valita meidät. Sellainen olisi ollut helppo tehdä – mutta myös kohderyhmälle helppo ohittaa.</p>
+  <hr class="rule" />
 
-  <hr class="rule">
-
-  <span class="section-label">Ratkaiseva valinta</span>
-  <p>Sen sijaan kirjoitimme tarinan asiakkaan näkökulmasta.</p>
-  <p>Antti halusi lopettaa vartijan työt ja ryhtyä metsäalan yrittäjäksi. Mutta yrittäjyys edellytti traktoria ja sen rahoitus oli kysymysmerkki. Jos koko pankkilaina menisi siihen, hänellä ei olisi varaa muihin pakollisiin välineisiin. Eikä osamaksu tullut kyseeseen käytetyn koneen kohdalla. Oliko haave kaatumassa rahoitukseen?</p>
-  <p>Sitten löytyi leasing-vaihtoehto. Se ratkaisi Antin ongelman. Traktori ei rasittanut omaa tasetta, ja pankkilaina riitti muihin hankintoihin.</p>
-  <p>Ensimmäisen vuoden liikevaihto: 500 000 euroa.</p>
-  
-
-  <hr class="rule">
-
-  <span class="section-label">Miksi tarina toimi</span>
-  <p> Päähenkilö ei ollut leasing-yrityksen toimitusjohtaja vaan ihminen joka on samassa tilanteessa kuin lukija. Antin haave, huoli ja helpotus olivat samaistuttavia jokaiselle maatalousyrittäjälle joka mietti konerahoitusta.</p>
-
-  <hr class="rule">
-
-  <span class="section-label">Muutos</span>
-  <p>Heti ensimmäisenä kampanjapäivänä leasing-yritys sai rahoitushakemuksia seitsenkertaisen määrän.</p>
-  <p>Yrittäjä oli helpottunut. Hän ei ollut odottanut että yhden asiakkaan tarina voisi vaikuttaa kampanjan lopputulokseen noin dramaattisesti.</p>
-  <p>Verkkolehden mainosvastaava sanoi, ettei ole koskaan nähnyt tuollaisia click-through- ja sitoutumislukuja.</p>
-  <p>Myös haastatellun traktoriyrittäjän oma näkyvyys kasvoi: Googlen hakuosumat ja tarjouspyynnöt kasvoivat selvästi, ja työntekijähakemuksia tuli useita heti julkaisun jälkeen.</p>
-<p>
-  <br/>
-    <a href="case-suomi-leasing-tarina.html" style="color: var(--accent); font-family: var(--sans); font-size: 0.9rem; letter-spacing: 0.04em;">Lue tarina →</a>
-    &nbsp;&nbsp;
-    <a href="https://www.maaseuduntulevaisuus.fi/mainos/fb7f291a-3eeb-45c5-8653-0a33c3c46d12" target="_blank" style="color: var(--muted); font-family: var(--sans); font-size: 0.9rem; letter-spacing: 0.04em;">Lue alkuperäinen Maaseudun Tulevaisuudessa →</a>
-  </p>
-</div>
-
-<div class="cta-section">
-  <h2>Haluatko tietää, puhutteleeko nykyinen asiakastarinanne oikeasti ostajaa?</h2>
-  <p>Lähetä minulle linkki nykyiseen caseen tai referenssisivuun. Saat suoran näkemyksen siitä, mikä toimii ja mitä muuttamalla se tukisi myyntiä paremmin.</p>
-  <a href="mailto:jarkko@jarkkomeretniemi.fi?subject=Asiakastarinan%20arvio&body=Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C" class="btn-light">Pyydä maksuton analyysi</a>
-</div>
-
-<footer>
-  <div class="footer-bio">
-    <div class="name">Jarkko Meretniemi</div>
-    <p>Kirjoitan B2B-yrityksille strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+  <div class="content fade-in">
+    <h2>Alkutilanne</h2>
+    <p>Leasing-yrittäjä oli ostanut mainospaikan verkkolehdestä. Kohderyhmä — maatalousyrittäjät — olivat juuri pohtimassa rahoitukseen liittyviä kysymyksiä, sillä alan koneita esittelevät messut olivat käynnistymässä. Momentum oli nyt. Hän tarvitsi sisältöä nopeasti, mutta pelkäsi että leasing-aihe jää tylsäksi.</p>
+    <p>Tavallinen ratkaisu olisi ollut yritysesittely: keitä olemme, mitä tarjoamme, miksi valita meidät. Sellainen olisi ollut helppo tehdä — mutta myös kohderyhmälle helppo ohittaa.</p>
   </div>
-  <div class="footer-links">
-    <a href="mailto:jarkko@jarkkomeretniemi.fi">jarkko@jarkkomeretniemi.fi</a>
-    <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn →</a>
+
+  <hr class="rule" />
+
+  <div class="content fade-in">
+    <h2>Ratkaiseva valinta</h2>
+    <p>Sen sijaan kirjoitimme tarinan asiakkaan näkökulmasta.</p>
+    <p>Antti halusi lopettaa vartijan työt ja ryhtyä metsäalan yrittäjäksi. Mutta yrittäjyys edellytti traktoria ja sen rahoitus oli kysymysmerkki. Jos koko pankkilaina menisi siihen, hänellä ei olisi varaa muihin pakollisiin välineisiin. Eikä osamaksu tullut kyseeseen käytetyn koneen kohdalla. Oliko haave kaatumassa rahoitukseen?</p>
+    <p>Sitten löytyi leasing-vaihtoehto. Se ratkaisi Antin ongelman. Kun traktori ei rasittanut omaa tasetta, pankkilaina riitti muihin hankintoihin.</p>
+    <p>Ja niin ensimmäisen vuoden liikevaihto: 500 000 euroa.</p>
   </div>
-</footer>
+
+  <hr class="rule" />
+
+  <div class="content fade-in">
+    <h2>Miksi tarina toimi</h2>
+    <p>Päähenkilö ei ollut leasing-yrityksen toimitusjohtaja vaan ihminen joka on samassa tilanteessa kuin lukija. Antin haave, huoli ja helpotus olivat samaistuttavia jokaiselle maatalousyrittäjälle joka mietti konerahoitusta.</p>
+  </div>
+
+  <hr class="rule" />
+
+  <div class="content fade-in">
+    <h2>Muutos</h2>
+    <p>Heti ensimmäisenä kampanjapäivänä leasing-yritys sai rahoitushakemuksia seitsenkertaisen määrän.</p>
+    <p>Yrittäjä oli helpottunut. Hän ei ollut odottanut että yhden asiakkaan tarina voisi vaikuttaa kampanjan lopputulokseen noin dramaattisesti.</p>
+    <p>Verkkolehden mainosvastaava sanoi, ettei ole koskaan nähnyt tuollaisia click-through- ja sitoutumislukuja.</p>
+    <p>Myös haastatellun traktoriyrittäjän oma näkyvyys kasvoi: Googlen hakuosumat ja tarjouspyynnöt kasvoivat selvästi, ja työntekijähakemuksia tuli useita heti julkaisun jälkeen.</p>
+    <a href="case-suomi-leasing-tarina.html" class="read-link">Lue tarina &rarr;</a>
+    <a href="https://www.maaseuduntulevaisuus.fi/mainos/fb7f291a-3eeb-45c5-8653-0a33c3c46d12" target="_blank" class="read-link-secondary">Lue alkuperäinen Maaseudun Tulevaisuudessa &rarr;</a>
+  </div>
+
+  <hr class="rule" />
+
+  <section class="cta-section fade-in">
+    <div style="max-width: 680px; margin: 0 auto;">
+      <h2>Haluatko tietää, puhutteleeko nykyinen asiakastarinanne oikeasti ostajaa?</h2>
+      <p>Lähetä minulle linkki nykyiseen caseen tai referenssisivuun. Saat suoran näkemyksen siitä, mikä toimii ja mitä muuttamalla se tukisi myyntiä paremmin.</p>
+      <a id="cta-email" class="btn-light" style="cursor:pointer;">Pyydä maksuton analyysi</a>
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <div class="footer-bio">
+      <div class="name">Jarkko Meretniemi</div>
+      <p>Kirjoitan B2B-yrityksille strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+    </div>
+    <div class="footer-links">
+      <a id="footer-email"></a>
+      <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn &rarr;</a>
+    </div>
+  </footer>
+
+  <script>
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(function(el) { observer.observe(el); });
+
+    (function() {
+      var u = 'jarkko';
+      var d = 'jarkkomeretniemi.fi';
+      var addr = u + '@' + d;
+      var subj = 'Asiakastarinan%20arvio';
+      var body = 'Hei%20Jarkko%2C%0A%0Ahaluaisin%20ett%C3%A4%20arvioit%20alla%20olevan%20asiakastarinan.%0A%0ATerveisin%2C';
+      var ctaEl = document.getElementById('cta-email');
+      if (ctaEl) { ctaEl.href = 'mail' + 'to:' + addr + '?subject=' + subj + '&body=' + body; }
+      var footerEl = document.getElementById('footer-email');
+      if (footerEl) { footerEl.href = 'mail' + 'to:' + addr; footerEl.textContent = addr; }
+    })();
+  </script>
 
 </body>
 </html>
