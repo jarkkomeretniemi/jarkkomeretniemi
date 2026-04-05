@@ -115,12 +115,6 @@
         margin-bottom: 0.5rem;
         order: -1;
       }
-      .ref-label {
-        display: none !important;
-      }
-      .ref-grid-row {
-        grid-template-columns: 1fr !important;
-      }
     }
 
     /* After section */
@@ -170,7 +164,7 @@
   </nav>
 
   <div class="page-hero fade-in">
-    <h1>Miksi useimmat asiakastarinat eivät vakuuta ja mitä niistä puuttuu</h1>
+    <h1>Miksi useimmat asiakastarinat eivät vakuuta — ja mitä niistä puuttuu</h1>
     <p>Tavallinen referenssitarina näyttää vain jäävuoren huipun: mitä asiakas tarvitsi ja mitä toimitimme. Strateginen asiakastarina näyttää kaiken sen mikä on pinnan alla. Juuri se saa ostajan tunnistamaan oman tilanteensa ja haluamaan muutosta.</p>
   </div>
 
@@ -179,11 +173,11 @@
   <!-- Iceberg -->
   <div class="iceberg-section fade-in">
     <div class="iceberg-container">
-      <svg class="iceberg-svg" viewBox="0 0 560 560" xmlns="http://www.w3.org/2000/svg">
+      <svg class="iceberg-svg" viewBox="0 0 560 620" xmlns="http://www.w3.org/2000/svg">
         <!-- Sky -->
         <rect x="0" y="0" width="560" height="210" fill="#f5f0e8"/>
         <!-- Water -->
-        <rect x="0" y="210" width="560" height="350" fill="#e8f1f5"/>
+        <rect x="0" y="210" width="560" height="410" fill="#e8f1f5"/>
 
         <!-- Water line -->
         <line x1="0" y1="210" x2="190" y2="210" stroke="#2a6f8e" stroke-width="2" opacity="0.3"/>
@@ -200,18 +194,20 @@
         <text x="280" y="165" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#c8401a" font-style="italic">tarvitsi ja mitä</text>
         <text x="280" y="182" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#c8401a" font-style="italic">me toimitimme</text>
 
-        <!-- Iceberg below water -->
-        <polygon points="190,210 155,290 140,370 160,450 255,500 305,500 400,450 420,370 405,290 370,210" fill="white" fill-opacity="0.65" stroke="#7a7060" stroke-width="1" stroke-opacity="0.25"/>
+        <!-- Iceberg below water - expanded for 7 lines -->
+        <polygon points="190,210 155,310 140,400 160,500 255,560 305,560 400,500 420,400 405,310 370,210" fill="white" fill-opacity="0.65" stroke="#7a7060" stroke-width="1" stroke-opacity="0.25"/>
 
         <!-- Below: label -->
         <text x="280" y="240" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="10" font-weight="500" fill="#7a7060" letter-spacing="1.5">STRATEGINEN ASIAKASTARINA</text>
 
-        <!-- Layer texts inside iceberg - same font size as above -->
-        <text x="280" y="290" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Miksi asiakkaan oli pakko muuttua?</text>
-        <text x="280" y="325" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Mitä jos mikään ei olisi muuttunut?</text>
-        <text x="280" y="360" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Miten oli yritetty ratkaista aiemmin?</text>
-        <text x="280" y="395" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Mitä ratkaisu muutti asiakkaan arjessa?</text>
-        <text x="280" y="430" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Miksi sillä on hänelle väliä?</text>
+        <!-- Layer texts inside iceberg - 7 lines, 6 questions -->
+        <text x="280" y="280" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Miksi asiakkaan oli pakko muuttua?</text>
+        <text x="280" y="312" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Mitä jos mikään ei olisi muuttunut?</text>
+        <text x="280" y="344" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Miten oli yritetty ratkaista aiemmin?</text>
+        <text x="280" y="376" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Mitä hän epäili palveluntarjoajassa</text>
+        <text x="280" y="408" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">ja mikä käänsi hänen päänsä?</text>
+        <text x="280" y="440" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Mitä ratkaisu muutti asiakkaan arjessa?</text>
+        <text x="280" y="472" text-anchor="middle" font-family="'Libre Baskerville', serif" font-size="10" fill="#7a7060" opacity="0.7" font-style="italic">Miksi sillä on hänelle väliä?</text>
       </svg>
     </div>
   </div>
@@ -220,7 +216,7 @@
 
   <!-- Story -->
   <div class="story-section fade-in">
-    <h2>Kaksi tarinaa samasta projektista – kumpi pysäyttää ostajan?</h2>
+    <h2>Sama projekti, kaksi eri versiota – kumpi pysäyttää ostajan?</h2>
 
       <!-- Ref version first -->
       <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
@@ -231,19 +227,19 @@
       <div style="margin-bottom: 3rem; padding: 1.5rem 2rem; border: 1px solid var(--rule); background: white;">
         <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8;">
           <div>X on kuljetusalan yritys. He tarvitsivat räätälöidyn reittioptimointijärjestelmän.</div>
-          <div class="ref-label" style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Tarve</div>
+          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Tarve</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8; margin-top: 0.6rem;">
           <div>Toimitimme heille ratkaisun, joka ottaa huomioon yrityksen erityistarpeet.</div>
-          <div class="ref-label" style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Ratkaisu</div>
+          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Ratkaisu</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8; margin-top: 0.6rem;">
           <div>Reittioptimoinnin ansiosta rekat pysyvät aikataulussa. Samoin polttoainekustannukset ovat laskeneet 18 %.</div>
-          <div class="ref-label" style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Hyödyt</div>
+          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Hyödyt</div>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 140px; gap: 1rem; color: var(--accent); font-size: 1rem; line-height: 1.8; margin-top: 0.6rem;">
           <div>Kuljetusalan yrityksessä ollaan erittäin tyytyväisiä järjestelmään. "Mielettömän hyvää työtä. Vahva suositus."</div>
-          <div class="ref-label" style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Testimoniaali</div>
+          <div style="font-size: 0.72rem; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ghost); text-align: right; padding-top: 0.3rem; line-height: 1.5;">Testimoniaali</div>
         </div>
       </div>
 
@@ -310,8 +306,8 @@
 
   <!-- Closing -->
   <div class="after-section fade-in">
-    <p>Punaisella merkityt lauseet ovat se mitä tavallinen referenssi kertoo.</p> 
-    <p>Harmaat lauseet ovat se, mikä saa ostajan kiinnostumaan tarinasta ja peilaamaan sitä omaan tilanteeseensa.</p>
+    <p>Punaisella merkityt lauseet ovat se mitä tavallinen referenssi kertoo. Harmaat lauseet ovat se, mikä saa ostajan kiinnostumaan tarinasta ja peilaamaan sitä omaan tilanteeseensa.</p>
+    <p>Sama projekti. Mutta vain toinen tarina pysäyttää ostajan.</p>
   </div>
 
   <section class="cta-section fade-in">
