@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – Jarkko Meretniemi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --cream: #f5f0e8;
+      --ink: #1a1713;
+      --muted: #7a7060;
+      --accent: #c8401a;
+      --rule: #d4cbbf;
+      --serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+    html { font-size: 18px; scroll-behavior: smooth; }
+    body { background: var(--cream); color: var(--ink); font-family: var(--sans); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 2rem 4rem; border-bottom: 1px solid var(--rule); }
+    .logo { font-family: var(--serif); font-size: 1rem; font-style: italic; color: var(--ink); text-decoration: none; }
+    nav a.back { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    nav a.back:hover { color: var(--accent); }
+
+    .page-hero { max-width: 680px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+    .page-hero h1 { font-family: var(--serif); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.2rem; }
+    .page-hero p { color: var(--muted); font-size: 1.02rem; max-width: 560px; line-height: 1.75; }
+
+    .rule { border: none; border-top: 1px solid var(--rule); max-width: 680px; margin: 0 auto; }
+
+    .cat { max-width: 680px; margin: 0 auto; padding: 4rem 2rem 1rem; }
+    .cat h2 { font-family: var(--serif); font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .cat .cat-desc { color: var(--muted); font-size: 0.92rem; margin-bottom: 2rem; }
+
+    .item-list { max-width: 680px; margin: 0 auto; padding: 0 2rem 3rem; display: flex; flex-direction: column; gap: 1.5px; }
+    .item {
+      background: white; padding: 1.8rem 2rem; display: flex;
+      justify-content: space-between; align-items: flex-start; gap: 1.5rem;
+      text-decoration: none; color: inherit; transition: background 0.2s;
+    }
+    .item:hover { background: #ede8df; }
+    .item .item-body { flex: 1; }
+    .item .item-title { font-family: var(--serif); font-size: 1rem; font-weight: 700; line-height: 1.4; margin-bottom: 0.4rem; }
+    .item .item-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.55; }
+    .item .arrow { font-size: 1.05rem; color: var(--accent); flex-shrink: 0; margin-top: 0.2rem; transition: transform 0.2s; }
+    .item:hover .arrow { transform: translateX(4px); }
+
+    footer { border-top: 1px solid var(--rule); max-width: 680px; margin: 2rem auto 0; padding: 3rem 2rem; display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem; flex-wrap: wrap; }
+    .footer-bio .name { font-family: var(--serif); font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .footer-bio p { font-size: 0.88rem; color: var(--muted); max-width: 340px; line-height: 1.6; }
+    .footer-links { display: flex; flex-direction: column; gap: 0.4rem; text-align: right; }
+    .footer-links a { font-size: 0.88rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--accent); }
+
+    .fade-in { opacity: 0; transform: translateY(18px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 1.5rem; }
+      .page-hero { padding: 4rem 1.5rem 2.5rem; }
+      .cat { padding: 3rem 1.5rem 1rem; }
+      .item-list { padding: 0 1.5rem 2.5rem; }
+      footer { flex-direction: column; }
+      .footer-links { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="logo">Jarkko Meretniemi</a>
+    <a href="index.html" class="back">← Etusivulle</a>
+  </nav>
+
+  <div class="page-hero fade-in">
+    <h1>Työnäytteitä</h1>
+    <p>Tarinankerronta on kaiken tekemiseni ydin — sovellan sitä asiakastarinoista uutiskirjeisiin, verkkosivuihin, artikkeleihin ja videoihin.</p>
+  </div>
+
+  <hr class="rule" />
+
+  <!-- ASIAKASTARINAT -->
+  <div class="cat fade-in">
+    <h2>Asiakas- ja yritystarinat</h2>
+    <p class="cat-desc">Haastatteluihin perustuvia tarinoita, jotka tekevät asiakkaan muutoksesta näkyvän.</p>
+  </div>
+  <div class="item-list fade-in">
+    <a href="https://www.maaseuduntulevaisuus.fi/mainos/fb7f291a-3eeb-45c5-8653-0a33c3c46d12" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Vanha traktori auttoi yrittäjää tekemään puolen miljoonan liikevaihdon ensimmäisenä vuonna</div>
+        <div class="item-desc">Case Suomi-Leasing — "Ei olisi onnistunut ilman leasingrahoitusta."</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://www.vismanova.fi/asiakaskokemuksia/kone-ketonen" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Perheyrityksen miljoonabisnes kasvaa yhä — Visma Novan avustuksella</div>
+        <div class="item-desc">Case Visma — tekninen ERP-tuote käännettynä asiakkaan kielelle.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://www.polarspin.com/happy-clients" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">How to make an app that attracts hundreds of thousands of mobile users</div>
+        <div class="item-desc">Case Polar Spin — korkean profiilin hanke pienen toimiston referenssinä.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <hr class="rule" />
+
+  <!-- UUTISKIRJEET -->
+  <div class="cat fade-in">
+    <h2>Uutiskirjeet</h2>
+    <p class="cat-desc">Kirjoitin asiakkaalleni uutiskirjeitä kuukausittain. Tulokset ylittivät alan keskiarvot selvästi: avausprosentti 42 % (alan keskiarvo n. 20 %) ja klikkausprosentti 8,31 % (keskiarvo 2–5 %).</p>
+  </div>
+  <div class="item-list fade-in">
+    <a href="https://mailchi.mp/83442809f7d8/lue-miten-vuoden-tarjoilijaksi-valittu-noora-kytt-tyssn-tarinoita-672843" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Esimerkki uutiskirjeestä</div>
+        <div class="item-desc">Oman yritykseni uutiskirje. Huom: tekstin sisäiset linkit eivät valitettavasti enää toimi.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <hr class="rule" />
+
+  <!-- VERKKOSIVUTEKSTIT -->
+  <div class="cat fade-in">
+    <h2>Verkkosivut</h2>
+    <p class="cat-desc">Sivustoja, joissa vastaan tekstistä, graafisesta suunnittelusta ja teknisestä toteutuksesta. Työtä edeltää aina brändin kirkastus.</p>
+  </div>
+  <div class="item-list fade-in">
+    <a href="https://www.polarspin.com/" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Polar Spin</div>
+        <div class="item-desc">Tekstit, graafinen suunnittelu ja tekninen koostaminen — kaikki minun tekemääni.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://www.vallilanhammaslaakarikeskus.fi/" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Vallilan hammaslääkärikeskus</div>
+        <div class="item-desc">Suunnittelin ja toteutin sivut alusta loppuun.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <hr class="rule" />
+
+  <!-- SOSIAALINEN MEDIA -->
+  <div class="cat fade-in">
+    <h2>Sosiaalinen media</h2>
+    <p class="cat-desc">Toimin muutaman vuoden ulkoistettuna markkinoinnin tekijänä ohjelmistokehittäjiä välittävälle yritykselle. Tein LinkedIn-postauksia 2–3 kertaa viikossa: henkilöhaastatteluja, kyselytuloksia, asiakastarinoita ja myynnillisempiä sisältöjä.</p>
+  </div>
+  <div class="item-list fade-in">
+    <a href="https://www.linkedin.com/posts/palavereissa-naureskeltiin-kun-kukaan-ei-share-7148221426578116608-AL-H/" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">"Palavereissa naureskeltiin kun kukaan ei ymmärtänyt, miten sovellus toimi"</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://www.linkedin.com/posts/elaeuimellisestikestaeuvaeuohjelmistokehitys-share-7033690214648717312-XdZ0/" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">🐶 🐱 Eläimelliset työnjohtajat</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://www.linkedin.com/posts/kestaeuvaeuohjelmistokehitys-share-7165608360988332034-_yxh/" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">😬 Totuuden hetki — henkilöstökyselyn tulokset</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://www.youtube.com/shorts/qk9K912y_rY" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Devaaja pakotettiin kirjoittamaan 5 minuutin työsopimus</div>
+        <div class="item-desc">Video.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <hr class="rule" />
+
+  <!-- ARTIKKELIT & OPPAAT -->
+  <div class="cat fade-in">
+    <h2>Artikkelit & oppaat</h2>
+    <p class="cat-desc">Haastatteluihin perustuvia asiantuntija-artikkeleita, e-kirjoja ja oppaita.</p>
+  </div>
+  <div class="item-list fade-in">
+    <a href="https://www.linkedin.com/pulse/n%C3%A4in-varmistat-ohjelmistokehitystiimisi-innovaatiokyvyn-kqjuf/" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Psykologisen turvallisuuden 10 käskyä</div>
+        <div class="item-desc">Näin varmistat ohjelmistokehitystiimisi innovaatiokyvyn myös tulevaisuudessa.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://github.com/jarkkomeretniemi/jarkkomeretniemi/blob/main/Fortumin-Design-Systemin-hyodyt-ebook-final.pdf" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Fortumin design systemin hyödyt liiketoiminnassa</div>
+        <div class="item-desc">Haastattelin ihmiset, kirjoitin tekstin, suunnittelin ulkoasun ja taitoin e-kirjan.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://github.com/jarkkomeretniemi/jarkkomeretniemi/blob/main/25_tapaa_ka_ytta_a__tarinoita_bisneksessa_.pdf" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">25 tapaa käyttää tarinoita bisneksessä</div>
+        <div class="item-desc">Opas tarinankerronnan hyödyntämisestä liiketoiminnassa, tehty yhtiökumppanin kanssa.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <hr class="rule" />
+
+  <!-- MUUT TYÖT -->
+  <div class="cat fade-in">
+    <h2>Muut työt</h2>
+    <p class="cat-desc">Tarinankerronta laajenee myös musiikkiin, copywritingiin ja videoon.</p>
+  </div>
+  <div class="item-list fade-in">
+    <a href="https://www.uuhmusic.fi/" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Musiikkia tunnetuille suomalaisille brändeille</div>
+        <div class="item-desc">Mm. K-Supermarket, Lidl ja MTV3.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://github.com/jarkkomeretniemi/jarkkomeretniemi/blob/main/Ta%CC%88yskuitu_Last_Call.pdf" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Copywriting eri tarpeisiin</div>
+        <div class="item-desc">Esim. myyntifunneleihin ja suorakirjeisiin. Esimerkkinä Täyskuitu Last Call.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://www.youtube.com/shorts/pPcr1TlgDog" target="_blank" class="item">
+      <div class="item-body">
+        <div class="item-title">Käsikirjoitan ja editoin videoita</div>
+        <div class="item-desc">2 minuutin video siitä, miten minusta tuli musiikintekijä.</div>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <footer class="fade-in">
+    <div class="footer-bio">
+      <div class="name">Jarkko Meretniemi</div>
+      <p>Kirjoitan B2B-yrityksille strategisia asiakastarinoita, jotka purkavat ostajan epäilyjä ja lyhentävät myyntiprosessia.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/jarkkomeretniemi/" target="_blank">LinkedIn →</a>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
